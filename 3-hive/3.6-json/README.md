@@ -1,0 +1,78 @@
+<link rel='stylesheet' href='../../assets/css/main.css'/>
+[Main Index](../../README.md)
+
+-----
+
+Lab : JSON in Hive
+=================
+
+### Overview
+Apply offers from offers table
+
+
+### Run time
+approx. 20-30 minutes
+
+
+## STEP 1:  Prepare Offers Table
+```sql
+
+    $  hive
+
+    hive >
+        set hive.cli.print.current.db=true;
+        
+        use MY_NAME_db;
+
+        CREATE EXTERNAL TABLE offers (
+            start_date STRING,
+            end_date STRING,
+            vendor_id INT ,
+            discount DOUBLE)
+        ROW FORMAT SERDE 'org.apache.hive.hcatalog.data.JsonSerDe'
+        STORED AS TEXTFILE
+        LOCATION '/data/offers/in-json'  ;
+```
+
+## STEP 2:  Inspect Hive tables
+
+```sql
+    hive> 
+
+        use MY_NAME_db;
+
+        show tables;
+
+        desc offers;
+
+        select * from offers;
+```
+
+## STEP 3:  Join
+Join `transactions` table and `offers` table.  
+Try this in Hive shell:
+
+```sql
+    hive> 
+    
+        select transactions.*,  offers.* from transactions join offers on (transactions.vendor_id = offers.vendor_id) limit 10; 
+```
+
+Inspect the joined data.
+
+## STEP 4:  Apply the discounts
+`offers` table has `discount` field.  
+Calculate total money spent on each category.  Try the following query.
+
+```sql
+    hive> 
+    
+        select transactions.*, vendors.*, offers.discount as discount 
+        from transactions  join vendors on transactions.vendor_id = vendors.id left outer join offers on offers.vendor_id = vendors.id 
+        limit 10;
+```
+
+Now how do we calculate the discounts?  Remember that an arithmetic operation involving null will be null.  That's not what we want.  
+
+
+
