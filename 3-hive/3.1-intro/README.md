@@ -7,7 +7,8 @@
 
 **Note : Replace MY_NAME appropriately throughout the lab.** 
 
-**Hints : 
+**Hints :** 
+
 * To see column names set the following property in hive shell
 ```sql
         set hive.cli.print.header=true;
@@ -27,6 +28,8 @@ There are two shells for interacting with Hive.
 * Hive : oldest 
 * Beeline : newest, faster
 
+Read  [hive clients](../README.md) for more details.
+
 ### Hive Shell
 ```bash
 
@@ -39,18 +42,39 @@ There are two shells for interacting with Hive.
 ```sql
     
     $  beeline
-
-    beeline>   !connect jdbc:hive2://
-    -- enter for user / pass
-
-    -- or !connect jdbc:hive2://server_ip:10000
-
-
-    beeline> show databases;
+    beeline>   
+        !connect jdbc:hive2://
+        -- no user/password, just hit enter for user / pass
+        show databases;
+       
 ```
 
-## Step 2: Start Hive Shell
+## Step 2: Data
+### [Transactions.csv](../../data/cc-data/transactions.csv) (<- click to download)
+```
+1,1,5,2015-01-01 00:00:00,El Paso,TX,62.81
+2,2,7,2015-01-01 00:00:00,Pittsburgh,PA,157.33
+3,2,10,2015-01-01 00:00:01,Austin,TX,14.86
+```
+
+### [accounts.csv](../../data/cc-data/accounts.csv) (<- click to download)
+```
+1,1,1,Ryan,Johnston,rjohnston0@mayoclinic.com,Male,5 Hintze Terrace,Laredo,TX,78044
+2,2,9,Todd,Martin,tmartin1@europa.eu,Male,878 Sheridan Point,Columbia,SC,29215
+3,3,1,Sharon,Martin,smartin2@archive.org,Female,2 Fremont Plaza,Lubbock,TX,79452
+```
+
+### [vendors.csv](../../data/cc-data/vendors.csv) (<- click to download)
+```
+1,Walmart,Bentonville,AR,General,2.0
+2,Kroger,Cincinatti,OH,Grocery,2.4
+3,Starbucks,Seattle,WA,Coffee,1.5
+```
+
+## Step 3 : Login to Hadoop cluster
 Login to the Hadoop cluster using SSH  (Instructor will provide details).
+
+## Step 4: Start Hive Shell
 
 And fire up Hive shell (Hive / Beeline)
 
@@ -62,11 +86,11 @@ And fire up Hive shell (Hive / Beeline)
     $ beeline
 ```
 
-## Step 2: Create your own database
+## Step 5: Create your own database
 Change 'MY_NAME' accordingly.
 
+### Option 1 : Hive
 ```sql
-
     hive>    
             -- see databases
             show databases;
@@ -76,21 +100,40 @@ Change 'MY_NAME' accordingly.
             show databases;
 ```
 
-## STEP 3: Create a Hive tables
+### Option 2 : Beeline
+```sql
+    beeline > 
+        show databases;
+        create database MY_NAME_db;
+        !connect jdbc:hive2:///MY_NAME_db; -- change MY_NAME accordingly
+        show tables;
+```
+
+## STEP 6: Create a Hive tables
 
 Make sure to use your own DB.
 
+### Option 1 : Hive Client
 ```sql
 
     hive>
         use MY_NAME_db;
+        show tables;
 
+```
+
+### Option 2 : Beeline client
+```sql
+    beeline > 
+        show databases;
+        !connect jdbc:hive2:///MY_NAME_db; -- change MY_NAME accordingly
+        show tables;
 ```
 
 ### Transactions Table
 
 ```sql
-    hive>
+    > 
 
         CREATE EXTERNAL TABLE transactions (
             id INT,
@@ -111,7 +154,7 @@ Make sure to use your own DB.
 
 ```sql
 
-    hive>
+    >
             CREATE EXTERNAL TABLE vendors (
                 id INT,
                 name STRING,
@@ -130,7 +173,7 @@ Make sure to use your own DB.
 ### Accounts Table
 
 ```sql
-    hive>
+    >
 
         CREATE EXTERNAL TABLE accounts (
             id INT,
@@ -153,11 +196,13 @@ Make sure to use your own DB.
 
 
 
-## STEP 4:  Run queries
+## STEP 7:  Run queries
 Lets see data in table.
 ```sql
-    hive >  
+    >  
         set hive.cli.print.header=true;
+
+        show tables;
 
         select * from transactions limit 10;
 

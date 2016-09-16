@@ -9,8 +9,6 @@ Markdown files are plain text files and can be viewed in any text editor.
 
 For best viewing experience we recommend the following setup
 
-### Chrome
-
 * Get Chrome browser from : https://www.google.com/chrome/browser/desktop/
 
 * Install **Markdown Preview Plus Plugin** for Chrome.  

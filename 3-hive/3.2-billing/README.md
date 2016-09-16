@@ -14,21 +14,31 @@
 
 
 ## STEP 1: Launch Hive shell, and inspect the tables
+### Option 1 : Hive client
 ```sql
     $ hive
     hive > 
         set hive.cli.print.current.db=true;
+        show databases;
         use MY_NAME_db;
         show tables;
 
 ```
 
+### Option 2 : Beeline client
+```sql
+    $ beeline
+    beeline >   
+            !connect jdbc:hive2:///MY_NAME_db;  -- change MY_NAME
+            show tables;
+
+```
 
 ## STEP 2:  Run query
 Lets count the number of rows in the table
 ```sql
-    hive >  
-        select count(*) from transactions;
+    > 
+    select count(*) from transactions;
 ```
 
 This will actually kick off a mapreduce job, and at the end you will get the count.
@@ -45,8 +55,8 @@ Calculate total invoice for each account.
 Hint : group by `account_id`
 
 ```sql
-    hive> 
-        select account_id, SUM(amount) as total from transactions  group by ???  limit 10;
+    > 
+    select account_id, SUM(amount) as total from transactions  group by ???  limit 10;
 ```
 
 
@@ -55,8 +65,8 @@ What is the query?
 
 ## STEP 5: Calculate accounts totals by month
 ```sql
-    hive > 
-         select account_id, YEAR(time) as year, MONTH(time) as month, SUM(amount) as total from transactions group by ???? limit 10;
+    > 
+    select account_id, YEAR(time) as year, MONTH(time) as month, SUM(amount) as total from transactions group by ???? limit 10;
 ```
 
 
@@ -66,16 +76,16 @@ We want to save the calculated invoices into a table.
 Create an invoice table as follows:
 
 ```sql
-    hive>
-        -- change MY_NAME
+    >
+     -- change MY_NAME
 
-        CREATE EXTERNAL TABLE invoices (
-            account_id INT,
-            total INT)
-        ROW FORMAT DELIMITED
-        FIELDS TERMINATED BY ','
-        stored as textfile
-        LOCATION '/user/ec2-user/MY_NAME/invoices' ; -- <-- change MY_NAME
+    CREATE EXTERNAL TABLE invoices (
+        account_id INT,
+        total INT)
+    ROW FORMAT DELIMITED
+    FIELDS TERMINATED BY ','
+    stored as textfile
+    LOCATION '/user/ec2-user/MY_NAME/invoices' ; -- <-- change MY_NAME
 
 ```
 
@@ -85,11 +95,10 @@ Create an invoice table as follows:
 Here is the query:
 
 ```sql
-    hive>
+    >
 
     INSERT OVERWRITE TABLE invoices
        ??? select query goes here (from step 3) ???   ; 
-
 
     select * from invoices limit 10;
 

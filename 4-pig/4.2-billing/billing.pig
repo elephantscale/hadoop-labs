@@ -32,14 +32,14 @@ tx_data = LOAD '/data/transactions/in/transactions.csv' USING PigStorage(',') AS
 
 -- ## TODO-4 : then sum cost
 -- ## hint : sum(amount) won't work, b/c amount is nested.
--- ##        we have to say   X.amount  
--- ##        inspect DESCRIBE grp_by_aid  output to determine what X is
+-- ##        we have to say   A.amount  
+-- ##        inspect DESCRIBE B  output to see why.
 -- invoice = FOREACH B GENERATE group, SUM(???.???) as total;
 -- sh echo "==== dumping invoice"
 -- DUMP invoice;
 
 -- ## TODO-6 : now process all the files
--- change LOAD example from '/data/transactions/in/transactions.csv' --> '/data/transactions/in'   (consume the entire dir)
+-- change LOAD example from '/data/transactions/in/transactions.csv' --> '/data/transactions/in/'   (consume the entire dir)
 -- ## NOTE : turn off any DUMP statements before running with large datasets !
 -- ## Instructor can provide even larger datasets  to run on
 

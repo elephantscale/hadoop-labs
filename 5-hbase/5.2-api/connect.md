@@ -60,6 +60,7 @@ You can use the following Java code.
 ```java
     long  t1 = System.currentTimeMillis();
     // establish connection
+    HTable htable = new HTable(config, "MYNAME_users"); 
     long  t2 = System.currentTimeMillis();
     System.out.println ("### connection took : " + (t2 - t1) + " ms");
 ```

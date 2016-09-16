@@ -4,6 +4,15 @@
 
 ## Demonstrated by Instructor
 
+## Copy labs to cluster
+```bash
+
+    rsync -avz -e ssh ~/ElephantScale/hadoop-labs   user@host-name:a
+    #or
+    scp -r ~/ElephantScale/hadoop-labs   user@host-name:a
+
+```
+
 ## Setup data in HDFS
 
 ``` bash

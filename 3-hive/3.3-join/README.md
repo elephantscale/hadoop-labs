@@ -5,16 +5,40 @@
 
 # Lab : Hive Joins
 
-## Step 1 : Inspect Tables
+## Step 1 : Launch Hive client
 
-Launch Hive shell
+Read  [hive clients](../README.md) for more details.
+
+### Option 1 : Hive Shell
+```sql
+
+    $   hive
+    hive>   
+        set hive.cli.print.current.db=true;
+        show databases;
+        use MY_NAME_db;
+        show tables;
 
 ```
-    $  hive
+
+### Option 2 : Beeline Shell
+```sql
+    
+    $  beeline
+    beeline>   
+        !connect jdbc:hive2://
+        -- no user/password, just hit enter for user / pass
+        show databases;
+        -- connect to your db
+        !connect jdbc:hive2:///MY_NAME_db;  -- change MY_NAME accordingly
+        show tables;
 ```
+
+## Step 2 : Inspect Tables
 
 ```sql
-    hive>
+    -- in hive or beeline shell > 
+
         set hive.cli.print.header=true;
         set hive.cli.print.current.db=true;
 
@@ -30,25 +54,25 @@ Launch Hive shell
         select * from vendors limit 10;
 ```
 
-## Step 2 : Join 'transactions' and 'vendors' table
+## Step 3 : Join 'transactions' and 'vendors' table
 
 ```sql
-    hive>
+    >
         select transactions.*,  vendors.* from transactions join vendors on (transactions.vendor_id = vendors.id) limit 10; 
 ```
 
-## Step 3 : More Joins
+## Step 4 : More Joins
 `vendors` table has `category` field.  
 Calculate total money spent on each category.  Update the above join query.  Fill in values for '???'
 
 ```sql
-    hive>
+    >
         select  vendors.category,  SUM(???) as total 
         from transactions join vendors on (transactions.vendor_id = vendors.id) group by ??? ; 
 
 ```
 
-## Step 4  Pretty Print
+## Step 5:  Pretty Print
 
 Pretty print the numbers displayed.
 
@@ -60,7 +84,7 @@ In `vendor` table you will find a column `swipe_rate`.  This is the rate they pa
 For example, 
 * if swipe_rate is 3%
 * customer paid $100 
-* the vendor gets  : $100 x .97 = $97 
+* the vendor gets  : $100 * (1 - 3/100) = $97 
 
 Calculate the final amount of money to be paid to each vendor.
 

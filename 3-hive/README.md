@@ -8,10 +8,13 @@
 ## Hive Clients
 ### 1 - Classic client 'Hive'
 Oldest, works reasonably well.
-```bash
+```sql
+
     $   hive
 
     hive> 
+        show databases;
+        use MY_db;  -- select a db
         show tables;
 
 ```
@@ -20,22 +23,34 @@ Oldest, works reasonably well.
 ### 2 - Beeline
 New client for Hive2 Server.
 
-```bash
+```sql
     $  beeline
 
-    -- connecting
-    beeline> !connect jdbc:hive2://
+    beeline> 
+        -- connecting to default Hive server
+        !connect jdbc:hive2://
 
-    beeline> !connect jdbc:hive2://server_ip:10000
+        -- connecting to specific Hive server
+        !connect jdbc:hive2://server_ip:10000
 
+        -- connecting to specific Hive db
+        !connect jdbc:hive2:///my_db
+        !connect jdbc:hive2://server_ip:10000/my_db
 
-    ...
+        -- getting help
+        !help;
+```
 
-    beeline>  show tables;
+### Typical Beeline session
+```sql
+    beeline>
+        !connect jdbc:hive2://
+        -- no user / pass, just hit enter at user / pass prompts
+        show databases;
 
-    # try help
-    beeline> help
-
+        -- connect to a specific db
+        !connect jdbc:hive2:///MY_NAME_db;  -- change MY_NAME accordingly
+        show tables;
 
 ```
 
