@@ -1,10 +1,10 @@
-[<< back to main index](README.md)
+<link rel='stylesheet' href='assets/css/main.css'/>
 
-# Lab : Setting up Data in HDFS 
+# Instructor Setup
 
-## Demonstrated by Instructor
+### To be completed by Instructor
 
-## Copy labs to cluster
+## 1 - Copy labs to cluster
 ```bash
 
     rsync -avz -e ssh ~/ElephantScale/hadoop-labs   user@host-name:a
@@ -13,12 +13,15 @@
 
 ```
 
-## Setup data in HDFS
-
+## 2 - Setup data in HDFS
 ``` bash
     # change MYNAME
     cd  ~/MY_NAME/hadoop-labs/
+```
 
+Just copy paste the following.
+
+``` bash
     echo "===== starting ====="
     sudo -u hdfs   hdfs dfs -mkdir   /data
     sudo -u hdfs  hdfs dfs -chown $USER /data

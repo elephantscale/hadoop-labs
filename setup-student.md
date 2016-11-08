@@ -1,8 +1,4 @@
 <link rel='stylesheet' href='assets/css/main.css'/>
-[Main Index](./README.md)
-
-----
-
 
 # Setup 1 : Setting Up Personal Workspace
 
