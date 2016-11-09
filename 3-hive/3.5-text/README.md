@@ -12,7 +12,7 @@ Choose one of the following text for analysis
 - `sotu-2014-obama.txt` : State of the Union address 2014
 - `FOMC20080916meeting.txt` : Feds emergency meeting after 2008 financial crisis  (un-classified after 5 years)
 
-## STEP 1: Stage Data in HDFS -- To be done by instructor
+## STEP 1: Instructor only  : Stage Data in HDFS 
 
 ```
     $   cd   ~/MYNAME/hadoop-dev/3-hive/3.5-text
@@ -33,35 +33,41 @@ Choose one of the following text for analysis
 
 
 ## STEP 2: Create a hive tables
+Launch Hive shell
+
+```bash
+    $   hive
+```
+
+Create text tables in Hive shell.
 
 ```sql
-    $ hive
 
-    hive>
-            set hive.cli.print.current.db=true;
-            
-            use MY_NAME_db;
+hive>
+        set hive.cli.print.current.db=true;
+        
+        use MY_NAME_db;
 
-            create external table sotu (
-                line string)
-            row format delimited
-            fields terminated by '\n'
-            stored as textfile
-            location '/data/text_sotu' ;
+        create external table sotu (
+            line string)
+        row format delimited
+        fields terminated by '\n'
+        stored as textfile
+        location '/data/text_sotu' ;
 
-            create external table moby (
-                line string)
-            row format delimited
-            fields terminated by '\n'
-            stored as textfile
-            location '/data/text_moby' ;
+        create external table moby (
+            line string)
+        row format delimited
+        fields terminated by '\n'
+        stored as textfile
+        location '/data/text_moby' ;
 
-            create external table fomc (
-                line string)
-            row format delimited
-            fields terminated by '\n'
-            stored as textfile
-            location '/data/text_fomc' ;
+        create external table fomc (
+            line string)
+        row format delimited
+        fields terminated by '\n'
+        stored as textfile
+        location '/data/text_fomc' ;
 
 
 ```

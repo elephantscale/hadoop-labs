@@ -4,7 +4,7 @@
 
 
 
-## Step 0 : Instructor Only : Stage JSON data in to HDFS
+## Step 1 : Instructor Only : Stage JSON data in to HDFS
 Follow [setup-clickstream.md](../setup-clickstream.md)
 
 

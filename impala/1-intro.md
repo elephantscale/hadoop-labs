@@ -1,9 +1,6 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
 
-[<< back to main index](../README.md)
-
-Lab :  Intro To Impala
-===========================================
+# Lab :  Intro To Impala
 
 ### Overview
 
@@ -22,20 +19,16 @@ N/A
 Replace `MY_NAME` appropriately throughout this lab.
 
 
-## STEP 0:  Instructor : Setup 'Credit Card' data
+## STEP 1:  Setup 'Credit Card' data
 Setup data using this lab : [setup-ccdata](../setup-ccdata.md).  
 You can skip this step if you had done it already.
 
-## Step 1: Start the Impala Shell
+## Step 2: Start the Impala Shell
 We are going to start the impala shell.
 
 ```bash
 
    $  impala-shell
-   *********************
-   Welcome to the Impala Shell. Copyright (c) 2015 Cloudera, Inc. All rights reserved.
-   ...
-   *******************
 ```
 
 Now we are in the impala shell.  Let's see what databases we have.
@@ -53,7 +46,7 @@ You may not see your database, though if you are on a shared machine you might. 
 is that hive metadata is not automatically loaded into impala.
 
 
-## Step : Update the metadata 
+## Step 3 : Update the metadata 
 
 **=> Invalidate metadata, and then Enter the SHOW DATABASES COMMAND** 
 
@@ -64,9 +57,7 @@ is that hive metadata is not automatically loaded into impala.
 ```
 
 
-----------------------------
-Step : Verify that impala can read the data 
-----------------------------
+## Step 4 : Verify that impala can read the data 
 
 Start the impala shell again.
 
@@ -84,7 +75,7 @@ We are going to start the impala shell.
 ```console
    Query: select * from transactions limit 10
    +--------+------------+-----------+---------------------+---------------+----------------+--------+
-   | id     | account_id | vendor_id | transaction_date    | location_city | location_state | amount |
+   | id     | account_id | vendor_id | transaction_date    | city | state | amount |
    +--------+------------+-----------+---------------------+---------------+----------------+--------+
    | 100001 | 3617       | 5         | 2015-01-02 00:00:00 | El Paso       | TX             | 167.02 |
    | 100002 | 6111       | 9         | 2015-01-02 00:00:00 | Tacoma        | WA             | 116.61 |
@@ -100,23 +91,21 @@ We are going to start the impala shell.
    Fetched 10 row(s) in 0.42s
 ```
 
-----------------------------
-Step : Do A More Complex Query
-----------------------------
+## Step 5 : Do A More Complex Query
 
 **=> EXECUTE THE FOLLOWING QUERY** 
 
 ```sql
    impala> 
-      select location_city, avg(amount) as city_avg from transactions group by location_city order by city_avg limit 10;
+      select city, avg(amount) as city_avg from transactions group by city order by city_avg limit 10;
 ```
 
 You should get something like the following;
 
 ```console
-Query: select location_city, avg(amount) as total from transactions group by location_city order by total desc limit 10
+Query: select city, avg(amount) as total from transactions group by city order by total desc limit 10
 +---------------+-------------------+
-| location_city | total             |
+| city | total             |
 +---------------+-------------------+
 | Hartford      | 151.5453329521629 |
 | Peoria        | 151.5219756078939 |
@@ -135,17 +124,21 @@ Fetched 10 row(s) in 0.53s
 Note the time.   Not too bad. 
 
 
-----------------------------
-Step : Try the same query in hive
-----------------------------
+## Step 6 : Try the same query in hive
 
-```sql
+Open another terminal (SSH)  to the cluster.  And run a hive shell.
+
+```bash
    $ hive
+```
+
+Try the same query in Hive.
+```sql
 
    hive> 
          use MY_NAME_db;
 
-         select location_city, avg(amount) as city_avg from transactions group by location_city order by city_avg limit 10;
+         select city, avg(amount) as city_avg from transactions group by city order by city_avg limit 10;
 ```
 
 The results should look something like this. Note the time elapsed.

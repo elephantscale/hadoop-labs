@@ -43,8 +43,9 @@ Labs
     - [1.1 - Hadoop Intro](1-hadoop-hdfs/1.1-hadoop.md)
     - [1.2 - HDFS Intro](1-hadoop-hdfs/1.2-hdfs.md) - demo by instructor
 
-2. **MapReduce** - Optional demo by instructor
-    - [2.1 - MapReduce GREP](2-mapreduce/2.1-grep.md)
+2. **MapReduce**  
+    - Optional Demo by instructor (time permitting)  
+     [2.1 - MapReduce GREP](2-mapreduce/2.1-grep.md)
 
 3. **Hive**
    - **Part I**
@@ -63,8 +64,8 @@ Labs
 
 4. **Impala**
    - **Setup**: We will use a Cloudera cluster for Impala.
-      - Login to Cloudera cluster (Instructor will provide detaisl)
-      - Run [setup1](setup-1.md) on cluster
+      - 1 : Instructor only : Run [instructor setup](setup-instructor.md) on cluster
+      - 2 : Students : Create Hive tables using [setup-ccdata](setup-ccdata.md)
    - [4.1 - Intro](impala/1-intro.md)
    - [4.2 - Performance](impala/2-perf.md)
 

@@ -4,6 +4,14 @@
 
 **Note : Replace MY_NAME appropriately throughout the lab.** 
 
+Start Hive Shell
+```bash
+    $   hive
+```
+
+Type the following in Hive shell.
+
+Let's create a database.
 
 ```sql
     hive>    
@@ -17,6 +25,8 @@
         use MY_NAME_db;
 
 ```
+
+And now create tables
 
 ```sql
 
@@ -62,7 +72,12 @@
         FIELDS TERMINATED BY ','
         stored as textfile
         LOCATION '/data/accounts/in/'  ;
+```
 
+And verify data
+
+```sql
+hive>
 
         set hive.cli.print.header=true;
 

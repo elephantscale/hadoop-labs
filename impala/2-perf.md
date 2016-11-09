@@ -64,13 +64,15 @@ Output may look like following:
 ```sql
 impala>
 
-   select location_city, avg(amount) as city_avg from transactions group by location_city order by city_avg limit 10;
+   select city, avg(amount) as city_avg from transactions group by city order by city_avg limit 10;
 
-  EXPLAIN select location_city, avg(amount) as city_avg from transactions group by location_city order by city_avg limit 10;
+  EXPLAIN select city, avg(amount) as city_avg from transactions group by city order by city_avg limit 10;
 
 ```
 
-You should get something like the following;
+You should get something like the following.  
+Read the EXPLAIN output *bottom up*  
+What do you notice about the explain?  
 
 ```console
 +------------------------------------------------------------------------------------+
@@ -89,13 +91,13 @@ You should get something like the following;
 | |                                                                                  |
 | 04:AGGREGATE [FINALIZE]                                                            |
 | |  output: avg:merge(amount)                                                       |
-| |  group by: location_city                                                         |
+| |  group by: city                                                         |
 | |                                                                                  |
-| 03:EXCHANGE [HASH(location_city)]                                                  |
+| 03:EXCHANGE [HASH(city)]                                                  |
 | |                                                                                  |
 | 01:AGGREGATE [STREAMING]                                                           |
 | |  output: avg(amount)                                                             |
-| |  group by: location_city                                                         |
+| |  group by: city                                                         |
 | |                                                                                  |
 | 00:SCAN HDFS [tim_db.transactions]                                                 |
 |    partitions=1/1 files=11 size=50.34MB                                            |
@@ -103,11 +105,10 @@ You should get something like the following;
 
 ```
 
-What do you notice about the explain?
 
 
 
-## Step 4 :  update the statistics on the transactions table
+## Step 4 :  Update the statistics on the transactions table
 
 ```
   impala>
@@ -118,7 +119,7 @@ What do you notice about the explain?
 
 ```
   impala>
-     EXPLAIN select location_city, avg(amount) as city_avg from transactions group by location_city order by city_avg limit 10;
+     EXPLAIN select city, avg(amount) as city_avg from transactions group by city order by city_avg limit 10;
 
 ```
 
@@ -129,17 +130,17 @@ Do you see the warning about statistics?
 ```sql
   impala>
 
-    select t.id, t.account_id, a.last_name, a.first_name, t.transaction_date, t.amount FROM transactions t JOIN accounts  a on a.id = t.id limit 10;
+    select t.id, t.account_id, a.last_name, a.first_name, t.time, t.amount FROM transactions t JOIN accounts  a on a.id = t.id limit 10;
 ```
 
 The results should be as follows:
 
 ```console
 
-ip-10-157-143-105.ec2.internal:21000] > select t.id, t.account_id, a.last_name, a.first_name, t.transaction_date, t.amount FROM transactions t JOIN accounts a on a.id = t.id limit 10;;
-Query: select t.id, t.account_id, a.last_name, a.first_name, t.transaction_date, t.amount FROM transactions t JOIN accounts a on a.id = t.id limit 10
+ip-10-157-143-105.ec2.internal:21000] > select t.id, t.account_id, a.last_name, a.first_name, t.time, t.amount FROM transactions t JOIN accounts a on a.id = t.id limit 10;;
+Query: select t.id, t.account_id, a.last_name, a.first_name, t.time, t.amount FROM transactions t JOIN accounts a on a.id = t.id limit 10
 +----+------------+-----------+------------+---------------------+--------+
-| id | account_id | last_name | first_name | transaction_date    | amount |
+| id | account_id | last_name | first_name | time                | amount |
 +----+------------+-----------+------------+---------------------+--------+
 | 1  | 5715       | Johnston  | Ryan       | 2015-01-01 00:00:00 | 62.81  |
 | 2  | 8236       | Martin    | Todd       | 2015-01-01 00:00:00 | 157.33 |
@@ -164,10 +165,11 @@ Let's see the explain command
 
 
 ```sql
-EXPLAIN select t.id, t.account_id, a.last_name, a.first_name, t.transaction_date, t.amount 
+EXPLAIN select t.id, t.account_id, a.last_name, a.first_name, t.time, t.amount 
 FROM transactions t JOIN accounts  a on a.id = t.id limit 10;
 ```
 
+Read EXPLAIN output from *bottom up*
 
 ```console
 +------------------------------------------------------------------------------------+
@@ -217,8 +219,27 @@ FROM transactions t JOIN accounts  a on a.id = t.id limit 10;
 ```
 
 
-Check the contents of both new tables to make sure they are fine.
+**=> Check the contents of both new tables to make sure they are fine.** 
 
+```sql
+    select * from transactions_parquet limit 10;
+
+    select * from accounts_parquet limit 10;
+```
+
+
+**=> Compare query performance on both CSV tables (*transactions, accounts*)  and their parquet equivalents.**
+
+```sql
+
+  -- CSV table
+  select city, avg(amount) as city_avg from transactions group by city order by city_avg limit 10;
+
+  -- Parquet table
+  select city, avg(amount) as city_avg from transactions_parquet group by city order by city_avg limit 10;
+
+
+```
 
 ## Step 8 :  Do a summary
 
@@ -226,7 +247,7 @@ Check the contents of both new tables to make sure they are fine.
 
 impala>
    
-  select t.id, t.account_id, a.last_name, a.first_name, t.transaction_date, t.amount FROM transactions t JOIN accounts  a on a.id = t.id limit 10;
+  select t.id, t.account_id, a.last_name, a.first_name, t.time, t.amount FROM transactions t JOIN accounts  a on a.id = t.id limit 10;
 
   summary;
 ```

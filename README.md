@@ -34,8 +34,10 @@ We recommend using a 'programmer's editor' to view these files. These editors ha
 
 ## Labs
 
-There are 2 flavors of labs
+There are 3 tracks:
 
 ### [A - Hadoop for Business Users](hadoop-bus.md)
 
 ### [B - Hadoop for Developers](hadoop-dev.md)
+
+### [C - SQL on Hadoop](hadoop-sql.md)
