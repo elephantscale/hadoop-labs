@@ -1,8 +1,5 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
 
-[<< back to main index](../README.md)
-
-
 Lab :  Profiling and Performance Tuning 
 ===========================================
 
@@ -16,24 +13,19 @@ None
 approx. 15 minutes
 
 ### Working directory
-~/MY_NAME/hadoop-sql/impala/perf
+N/A
 
 ### Notes
 Replace `MY_NAME` appropriately throughout this lab.
 
 
-----------------------------
-STEP 0:  Setup 'Credit Card' data
-----------------------------
-Setup data using this lab : [cc-data](../../cc-data/README.md).  
+## STEP 1:  Setup 'Credit Card' data
+Setup data using this lab : [setup-ccdata](../setup-ccdata.md).  
 You can skip this step if you had done it already.
 
 Be sure your database MY_NAME_db already exists.
 
-
-----------------------------
-Step : Verify that new accounts table has data
-----------------------------
+## Step 2 : Verify that new accounts table has data
 Start impala-shell, select some data:
 ```bash
     $ impala-shell 
@@ -65,9 +57,7 @@ Output may look like following:
 
 
 
-----------------------------
-Step : Explain more complex query
-----------------------------
+## Step 3 : Explain more complex query
 
 **=> EXECUTE THE FOLLOWING QUERY** 
 
@@ -117,9 +107,7 @@ What do you notice about the explain?
 
 
 
-----------------------------
-Step :  update the statistics on the transactions table
-----------------------------
+## Step 4 :  update the statistics on the transactions table
 
 ```
   impala>
@@ -136,9 +124,7 @@ Step :  update the statistics on the transactions table
 
 Do you see the warning about statistics?
 
-----------------------------
-Step :  Explain a query involving a join between two tables.
-----------------------------
+## Step 5 :  Explain a query involving a join between two tables.
 
 ```sql
   impala>
@@ -209,9 +195,9 @@ FROM transactions t JOIN accounts  a on a.id = t.id limit 10;
 |    runtime filters: RF000 -> t.id                                                  |
 +------------------------------------------------------------------------------------+
 ```
-----------------------------
-Step :  Run COMPUTE STATS on both tables.
-----------------------------
+
+
+## Step 6 :  Run COMPUTE STATS on both tables.
 
 ```sql
   impala>
@@ -220,9 +206,7 @@ Step :  Run COMPUTE STATS on both tables.
 ```
 
 
-----------------------------
-Step : CREATE PARQUET TABLES for both tables
-----------------------------
+## Step 7 : CREATE PARQUET TABLES for both tables
 
 ```sql
   impala> 
@@ -236,9 +220,7 @@ Step : CREATE PARQUET TABLES for both tables
 Check the contents of both new tables to make sure they are fine.
 
 
-----------------------------
-Step :  Do a summary
-----------------------------
+## Step 8 :  Do a summary
 
 ```sql
 
@@ -252,9 +234,7 @@ impala>
 Check out the summary report of the query.
 
 
-----------------------------
-Step :  Do a profile 
-----------------------------
+## Step 9 :  Do a profile 
 
 ```sql
   impala>

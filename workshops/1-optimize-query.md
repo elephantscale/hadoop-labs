@@ -6,7 +6,7 @@
 
 
 ## Step 0 : Instructor Only : Stage JSON data in to HDFS
-Follow [setup-clickstream.md](../../setup-clickstream.md)
+Follow [setup-clickstream.md](../setup-clickstream.md)
 
 
 ## Group Exercise

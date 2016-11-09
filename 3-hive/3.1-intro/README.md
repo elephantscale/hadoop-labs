@@ -92,6 +92,7 @@ Change 'MY_NAME' accordingly.
 ### Option 1 : Hive
 ```sql
     hive>    
+            set hive.cli.print.current.db=true;
             -- see databases
             show databases;
 
@@ -103,6 +104,7 @@ Change 'MY_NAME' accordingly.
 ### Option 2 : Beeline
 ```sql
     beeline > 
+        set hive.cli.print.current.db=true;
         show databases;
         create database MY_NAME_db;
         !connect jdbc:hive2:///MY_NAME_db; -- change MY_NAME accordingly
@@ -117,6 +119,7 @@ Make sure to use your own DB.
 ```sql
 
     hive>
+        set hive.cli.print.current.db=true;
         use MY_NAME_db;
         show tables;
 
@@ -125,6 +128,7 @@ Make sure to use your own DB.
 ### Option 2 : Beeline client
 ```sql
     beeline > 
+        set hive.cli.print.current.db=true;
         show databases;
         !connect jdbc:hive2:///MY_NAME_db; -- change MY_NAME accordingly
         show tables;
@@ -134,7 +138,6 @@ Make sure to use your own DB.
 
 ```sql
     > 
-
         CREATE EXTERNAL TABLE transactions (
             id INT,
             account_id INT,
@@ -155,17 +158,17 @@ Make sure to use your own DB.
 ```sql
 
     >
-            CREATE EXTERNAL TABLE vendors (
-                id INT,
-                name STRING,
-                city STRING,
-                state STRING ,
-                category STRING ,
-                swipe_rate DOUBLE)
-            ROW FORMAT DELIMITED
-            FIELDS TERMINATED BY ','
-            stored as textfile
-            LOCATION '/data/vendors/in/'  ;
+        CREATE EXTERNAL TABLE vendors (
+            id INT,
+            name STRING,
+            city STRING,
+            state STRING ,
+            category STRING ,
+            swipe_rate DOUBLE)
+        ROW FORMAT DELIMITED
+        FIELDS TERMINATED BY ','
+        stored as textfile
+        LOCATION '/data/vendors/in/'  ;
 
 
 ```
@@ -174,7 +177,6 @@ Make sure to use your own DB.
 
 ```sql
     >
-
         CREATE EXTERNAL TABLE accounts (
             id INT,
             accountNo INT,

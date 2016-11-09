@@ -36,8 +36,7 @@ Labs
 ----
 
 * **Setup**
-  - [1 - Instructor Setup](setup-instructor.md) - To be completed by _instructor only_
-  - [2 - Student Setup](setup-student.md)
+  - [Instructor Setup](setup-instructor.md) - To be completed by _instructor only_
 
 
 1. **Hadoop & HDFS** 

@@ -1,18 +1,16 @@
+<link rel='stylesheet' href='../assets/css/main.css'/>
+
 # Dataframe
 
-## Working Directory
-
-## Depends On
-None
 
 
 ## Step 0 : Instructor Only : Stage JSON data in to HDFS
-Follow [setup-clickstream.md](../../setup-clickstream.md)
+Follow [setup-clickstream.md](../setup-clickstream.md)
 
 
 ## Step 2 : Start Spark shell
 
-```
+```bash
     $    spark-shell
 ```
 
@@ -27,13 +25,14 @@ And set the log level to WARN
 Issue the following commands in Spark-shell
 
 ```scala
-        val clickstream = sqlContext.read.json("/user/ec2-user/clickstream/in-json/clickstream.json")
 
-        // inspect the schema
-        clickstream.printSchema
+    val clickstream = sqlContext.read.json("/data/clickstream/in-json/clickstream.json")
 
-        // inspect data
-        clickstream.show
+    // inspect the schema
+    clickstream.printSchema
+
+    // inspect data
+    clickstream.show
 ```
 
 ## Step 4 : Methods available on Dataframe
@@ -88,11 +87,11 @@ Use tab completion to explore methods available
 
 
 ## Step 7 : Load all JSON data
-Let's load all JSON files in `clickstream/in-json` directory
+Let's load all JSON files in `/data/clickstream/in-json` directory
 
 ```scala
 
-    val clicks = sqlContext.read.json("/user/ec2-user/clickstream/in-json/")
+    val clicks = sqlContext.read.json("/data/clickstream/in-json/")
     clicks.count
 
     clicks.groupBy("domain").count.show

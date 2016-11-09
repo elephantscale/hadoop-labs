@@ -9,49 +9,56 @@
 For this lab we are going to use clickstream data in JSON format.  
 Follow the steps to 
 
-```
-    #  be in the working directory
-    $   cd  ~/MY_NAME/hadoop-sql/spark
+```bash
 
+    #  be in the working directory
+    $   cd  ~/MY_NAME/hadoop-labs
+```
+
+```bash
     #  create an HDFS directory
-    $   hdfs   dfs -mkdir  -p  clickstream/in-json 
+    hdfs   dfs -mkdir  -p  /data/clickstream/in-json 
 
     #  copy sample file
-    $   hdfs   dfs   -put   ../data/click-stream/clickstream.json    clickstream/in-json/
+    hdfs   dfs   -put   data/click-stream/clickstream.json    /data/clickstream/in-json/
 
-    $   hdfs   dfs -mkdir  -p  clickstream/in/
-    $   hdfs   dfs   -put   ../data/click-stream/clickstream.csv    clickstream/in/
+    hdfs   dfs -mkdir  -p  /data/clickstream/in/
+
+    hdfs   dfs   -put   data/click-stream/clickstream.csv    /data/clickstream/in/
 
 ```
 
 Let's generate some more clickstream data and stage into HDFS.
 
 ```
-    $  python ../data/click-stream/gen-clickstream.py
-    $  hdfs dfs -put clickstream*.csv clickstream/in/
+    python data/click-stream/gen-clickstream.py
+    hdfs dfs -put clickstream*.csv   /data/clickstream/in/
 
     #  generate data
-    $  python ../data/click-stream/gen-clickstream-json.py
+    python data/click-stream/gen-clickstream-json.py
 
     #  copy data to HDFS
-    $  hdfs dfs -put   *.json   clickstream/in-json/
+    hdfs dfs -put   *.json   /data/clickstream/in-json/
 
     #  verify data in HDFS
     # Use the HDFS UI
 ```
 
 ## Domains
-```
-    $  hdfs  dfs -mkdir  -p  domains/in-json/
-    $  hdfs  dfs -mkdir  -p  domains/in/
+```bash
+
+    hdfs  dfs -mkdir  -p  /data/domains/in-json/
+    hdfs  dfs -mkdir  -p  /data/domains/in/
 
 
-    $  hdfs dfs -put ../data/click-stream/domain-info.csv  domains/in/
-    $  hdfs dfs -put ../data/click-stream/domain-info.json  domains/in-json/
+    hdfs dfs -put   data/click-stream/domain-info.csv   /data/domains/in/
+    hdfs dfs -put   data/click-stream/domain-info.json  /data/domains/in-json/
+
 ```
 
 ## Hive Tables
-```
+```sql
+
     $  hive
     hive>
 
@@ -67,7 +74,7 @@ Let's generate some more clickstream data and stage into HDFS.
         ROW FORMAT DELIMITED
         FIELDS TERMINATED BY ','
         stored as textfile
-        LOCATION '/user/ec2-user/clickstream/in' ;
+        LOCATION '/data/clickstream/in' ;
 
 
         CREATE EXTERNAL TABLE domains (
@@ -76,5 +83,5 @@ Let's generate some more clickstream data and stage into HDFS.
         ROW FORMAT DELIMITED
         FIELDS TERMINATED BY ','
         stored as textfile
-        LOCATION '/user/ec2-user/domains/in'    ;
+        LOCATION '/data/domains/in'    ;
 ```

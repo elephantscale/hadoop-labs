@@ -76,7 +76,7 @@ if __name__ == '__main__':
     start_ts = year_start + day_delta
     #end_ts = dt.datetime(start_ts.year, start_ts.month, start_ts.day, 23, 59, 59)
     end_ts = dt.datetime(start_ts.year, start_ts.month, start_ts.day+1, 0, 0, 0)
-    filename = start_ts.strftime("%Y-%m-%d") 
+    filename = 'clickstream__' + start_ts.strftime("%Y-%m-%d") 
     if (log_format == 'csv'):
       filename = filename + ".csv"
     if (log_format == 'json'):

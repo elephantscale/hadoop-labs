@@ -16,21 +16,17 @@ None
 approx. 15 minutes
 
 ### Working directory
-MY_NAME/hadoop-sql/impala/
+N/A
 
 ### Notes
 Replace `MY_NAME` appropriately throughout this lab.
 
 
-----------------------------
-STEP 0:  Setup 'Credit Card' data
-----------------------------
-Setup data using this lab : [cc-data](../../cc-data/README.md).  
+## STEP 0:  Instructor : Setup 'Credit Card' data
+Setup data using this lab : [setup-ccdata](../setup-ccdata.md).  
 You can skip this step if you had done it already.
 
-----------------------------
-Step 1: Start the Impala Shell
-----------------------------
+## Step 1: Start the Impala Shell
 We are going to start the impala shell.
 
 ```bash
@@ -57,9 +53,7 @@ You may not see your database, though if you are on a shared machine you might. 
 is that hive metadata is not automatically loaded into impala.
 
 
-----------------------------
-Step : Update the metadata 
-----------------------------
+## Step : Update the metadata 
 
 **=> Invalidate metadata, and then Enter the SHOW DATABASES COMMAND** 
 

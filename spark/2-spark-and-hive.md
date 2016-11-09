@@ -1,14 +1,10 @@
+<link rel='stylesheet' href='../assets/css/main.css'/>
+
 # Hive And Spark
-
-## Working Directory
-
-
-## Depends On
-
 
 
 ## Step 2 : In Terminal 1 : Start Hive Shell
-```
+```bash
     $   hive
 ```
 
@@ -16,17 +12,17 @@ Inspect the tables and run a query on 'clickstream' table.
 
 ```sql
     hive>
-            show tables;
+        show tables;
 
-            select * from clickstream limit 10;
+        select * from clickstream limit 10;
 
-            select action, count(*) as total from clickstream group by action;
+        select action, count(*) as total from clickstream group by action;
 ```
 
 
 ## Step 3 : In Terminal 2 Start Spark shell
 
-```
+```bash
     $    spark-shell
 ```
 
@@ -41,19 +37,20 @@ Go to http://localhost:4040 in the browser.
 ## Step 4 : Inspect Hive Tables
 Do this in Spark-Shell
 
-```
-    scala>
+```scala
 
-        sqlContext.tableNames
+scala>
 
-        val t = sqlContext.table("clickstream")
+    sqlContext.tableNames
 
-        t.printSchema
+    val t = sqlContext.table("clickstream")
 
-        t.show
+    t.printSchema
 
-        sqlContext.sql("select * from clickstream limit 10").show
+    t.show
 
-        sqlContext.sql("select action, count(*) as total from clickstream group by action").show
+    sqlContext.sql("select * from clickstream limit 10").show
+
+    sqlContext.sql("select action, count(*) as total from clickstream group by action").show
 ```
 
