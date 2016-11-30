@@ -17,7 +17,7 @@
 
 ``` bash
     # change MYNAME
-    $  cd  ~/MY_NAME/hadoop-labs/
+    $  cd  ~/MY_NAME/hadoop-labs/scripts
 
     $  ./setup-data.sh
 ```
