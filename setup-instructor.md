@@ -6,10 +6,12 @@
 
 ## 1 - Copy labs to cluster
 ```bash
+    
+    # target dir is :  ~/a
 
-    rsync -avz -e ssh ~/ElephantScale/hadoop-labs   user@host-name:a
+    rsync -avz -e ssh ~/ElephantScale/hadoop-labs   ec2-user@host-name:a
     #or
-    scp -r ~/ElephantScale/hadoop-labs   user@host-name:a
+    scp -r ~/ElephantScale/hadoop-labs   ec2-user@host-name:a
 
 ```
 
@@ -17,7 +19,7 @@
 
 ``` bash
     # change MYNAME
-    $  cd  ~/MY_NAME/hadoop-labs/scripts
+    $  cd  ~/a/hadoop-labs/scripts
 
     $  ./setup-data.sh
 ```

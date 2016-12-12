@@ -8,6 +8,8 @@ set -e  # exit on first error
 
 
 echo "===== starting ====="
+sudo -u hdfs  hdfs  dfs -mkdir /user/$USER
+sudo -u hdfs  hdfs  dfs -chown $USER  /user/$USER
 sudo -u hdfs   hdfs dfs -mkdir   /data
 sudo -u hdfs  hdfs dfs -chown $USER /data
 
