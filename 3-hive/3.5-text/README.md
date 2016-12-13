@@ -6,11 +6,12 @@
 # Lab: Analyzing Text Data
 
 
-## Step 0: Datasets To Analyze
-Choose one of the following text for analysis  
-- `moby-dick.txt` : The classic novel
-- `sotu-2014-obama.txt` : State of the Union address 2014
-- `FOMC20080916meeting.txt` : Feds emergency meeting after 2008 financial crisis  (un-classified after 5 years)
+## Datasets To Analyze
+We have the following text data.  
+Click on the links to download the text.
+- [moby-dick.txt](moby-dick.txt) : The classic novel
+- [sotu-2014-obama.txt](sotu-2014-obama.txt) : State of the Union address 2014
+- [FOMC20080916meeting.txt](FOMC20080916meeting.txt) : Feds emergency meeting after 2008 financial crisis  (un-classified after 5 years)
 
 ## STEP 1: Instructor only  : Stage Data in HDFS 
 

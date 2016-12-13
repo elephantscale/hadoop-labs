@@ -3,7 +3,7 @@
 
 -----
 
-# Lab : Hive Partitions
+# Lab 3.4 : Hive Partitions
 
 ## Step 1: Hive Shell
 ```bash
