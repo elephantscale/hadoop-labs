@@ -1,6 +1,20 @@
 <link rel='stylesheet' href='assets/css/main.css'/>
 
-# Setup 1 : Setting Up Personal Workspace
+# Setup Student : Setting Up Personal Workspace
+
+## Step 1 : Instructor only : Start NoIDE
+Login to the node and start noide as follows
+```bash
+    $   nohup ~/run-noide.sh  &
+```
+
+Go to port number 3000 of the machine to verify NoIDE is running.
+
+
+## Step 2 : Create a folder
+
+--------
+# Old
 
 ## STEP 1: login to the cluster
 Login in to the cluster assigned to you using SSH.  Instructor will provide details.

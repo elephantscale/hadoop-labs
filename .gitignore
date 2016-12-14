@@ -10,6 +10,6 @@
 *.log
 *.out
 *.data
-*.zip
+*.zip*
 
 .DS_Store

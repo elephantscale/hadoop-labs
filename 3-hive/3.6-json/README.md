@@ -13,6 +13,15 @@ Apply offers from offers table
 ### Run time
 approx. 20-30 minutes
 
+## JSON Data (Offers.json)
+Our [offers.json](../../data/cc-data/offers.json) (click the link to download)
+looks like this:
+
+```json
+{"start_date": "2015-01-01 00:00:36", "end_date": "2015-01-02 00:00:36", "discount": 0.10, "vendor_id": 5}
+{"start_date": "2015-01-02 00:00:36", "end_date": "2015-01-03 00:00:36", "discount": 0.05, "vendor_id": 1}
+{"start_date": "2015-01-03 00:00:36", "end_date": "2015-01-04 00:00:36", "discount": 0.20, "vendor_id": 2}
+```
 
 ## STEP 1:  Prepare Offers Table
 ```sql

@@ -36,8 +36,7 @@ Labs
 ----
 
 * **Setup**
-  - [1 - Setup by instructor](setup-instructor.md) - To be completed by _instructor only_
-  - [2 - Setup by student](setup-student.md)
+  - [Setup by instructor](setup-instructor.md) - To be completed by _instructor only_
 
 
 1. **Hadoop & HDFS** 
@@ -63,5 +62,9 @@ Labs
    - [3.9 - Tez](3-hive/3.9-tez/README.md)
 
 4. **Pig**
+   - [4.0 - Setup by student](setup-student.md)
    - [4.1 - intro](4-pig/4.1-intro/README.md)
    - [4.2 - billing](4-pig/4.2-billing/README.md)
+   - [4.3 - Itemized billing](4-pig/4.3-billing-itemized/README.md)
+   - [4.4 - Top 10](4-pig/4.4-top-spenders/README.md)
+   - [4.5 - Join](4-pig/4.5-join/README.md)
