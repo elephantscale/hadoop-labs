@@ -62,7 +62,7 @@ Labs
    - [3.8 - Histograms](3-hive/3.8-histograms/README.md)
    - [3.9 - Tez](3-hive/3.9-tez/README.md)
 
-4. **Impala**
+4. **Impala** (only on Cloudera Distribution)
    - **Setup**: We will use a Cloudera cluster for Impala.
       - 1 : Instructor only : Run [instructor setup](setup-instructor.md) on cluster
       - 2 : Students : Create Hive tables using [setup-ccdata](setup-ccdata.md)
