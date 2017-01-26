@@ -30,6 +30,6 @@ DUMP itemized;
 -- ## TODO : now process all the files (change LOAD example )
 
 -- ## TODO : change MY_NAME / store the file into HDFS
--- STORE total_by_cid_rid INTO 'MY_NAME/itemized-billing/out';
+-- STORE itemized INTO 'MY_NAME/itemized-billing/out';
 
 
