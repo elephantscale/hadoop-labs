@@ -1,11 +1,12 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
 
-# Dataframe
+# Spark SQL on Hadoop
+
+<img src="../assets/images/spark-and-hadoop-1.png" style="border: 5px solid grey ; max-width:100%;" />
 
 
-
-## Step 1 : Instructor Only : Stage JSON data in to HDFS
-Follow [setup-clickstream.md](../setup-clickstream.md)
+## Step 1 : Login to Hadoop node
+Instructor will provide details
 
 
 ## Step 2 : Start Spark shell
@@ -15,8 +16,8 @@ Follow [setup-clickstream.md](../setup-clickstream.md)
 ```
 
 And set the log level to WARN
-```
-    scala> 
+```scala
+scala> 
             sc.setLogLevel("WARN")
 ```
 

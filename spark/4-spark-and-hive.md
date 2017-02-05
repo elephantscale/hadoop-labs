@@ -1,7 +1,15 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
 
-# Hive And Spark
+# Spark And Hive
 
+
+<img src="../assets/images/spark-and-hadoop-1.png" style="border: 5px solid grey ; max-width:100%;" />
+
+<img src="../assets/images/spark-and-hadoop-2.png" style="border: 5px solid grey ; max-width:100%;" />
+
+
+## Step 1 : Open Two Terminal Sessions to Hadoop Node
+Instructor will demonstrate how.
 
 ## Step 2 : In Terminal 1 : Start Hive Shell
 ```bash

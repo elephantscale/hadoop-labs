@@ -36,8 +36,8 @@ Labs
 ----
 
 * **Setup**
-  - [Setup by student](setup-student.md)
-  - [Setup by instructor](setup-instructor.md) - To be completed by _instructor only_
+  - [ 1 - Setup by instructor](setup-instructor.md) - To be completed by _instructor only_
+  - [2 - Setup by student](setup-student.md)
 
 
 1. **Hadoop & HDFS** 
@@ -73,3 +73,9 @@ Labs
 5. **HBase**
    - [5.1 - intro](5-hbase/5.1-hbase-intro.md)
    - [5.2 - API](5-hbase/5.2-api/README.md)
+
+6. **Spark**
+   - [6.1 - Spark Shell](spark/1-spark-shell.md)
+   - [6.2 - RDDs](spark/2-RDD.md)
+   - [6.3 - Spark SQL](spark/3-spark-sql.md)
+   - [6.4 - Spark and Hive](spark/4-spark-and-hive.md)
