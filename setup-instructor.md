@@ -22,6 +22,8 @@
     $  cd  ~/a/hadoop-labs/scripts
 
     $  ./setup-data.sh
+
+    $  ./setup-clickstream.sh
 ```
 
 ## 3 - Verify data in HDFS UI
