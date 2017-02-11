@@ -6,18 +6,24 @@
 # Pig Lab : Calculate customer invoice
 
 ## Working Dir
-`MY_NAME/hadoop-dev-labs/4-pig/4.2-billing`
+`MY_NAME/hadoop-labs/4-pig/4.2-billing`
 
 **(Instructor : Answer  `/labs-solutions/hadoop/pig/billing-answer.pig`)**
 
+## STEP 1:  Goto  working directory
 
-## STEP 1:  Edit the Pig script 
-Edit file :    `~/MY_NAME/hadoop-dev-labs/4-pig/4.2-billing/billing.pig`.  
+```bash
+    $   cd  ~/MY_NAME/hadoop-labs/4-pig/4.2-billing
+
+```
+
+## STEP 2:  Edit the Pig script 
+Edit file :    `~/MY_NAME/hadoop-labs/4-pig/4.2-billing/billing.pig`.  
 Fix TODO items and save the file.   
 And run the script as follows.
 
 ```bash
-    $  pig billing.pig
+    $  pig billing.pig   2> log
 ```
 
 

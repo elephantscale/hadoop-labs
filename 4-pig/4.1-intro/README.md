@@ -6,7 +6,7 @@
 # Pig Intro Lab : learning pig concepts
 
 ## Working dir : 
-    `~/MY_NAME/hadoop-dev-labs/4-pig/4.1-intro`
+    `~/MY_NAME/hadoop-labs/4-pig/4.1-intro`
 
 ## STEP 1: Verify Pig is installed and configured properly
 Invoke Pig in command line as follows:
@@ -22,13 +22,13 @@ Exit pig shell by typing    `quit;`
 ### Go to the correct working directory:
 Update MY_NAME accordingly.
 ```bash
-    $   cd  ~/MY_NAME/hadoop-dev-labs/4-pig/4.1-pig
+    $   cd  ~/MY_NAME/hadoop-labs/4-pig/4.1-intro
 ```
 
 
 ## STEP 3:  Edit the Pig script
 
-Edit file :    `~/MY_NAME/hadoop-dev-labs/4-pig/4.1-pig/intro.pig`.  
+Edit file :    `~/MY_NAME/hadoop-labs/4-pig/4.1-intro/intro.pig`.  
 
 Use one of the three, in order of preference
 * NoIDE editor in the browser
@@ -39,10 +39,13 @@ Fix TODO items and save the file.
 And run the script as follows.
 
 ```bash
-    $  pig intro.pig
+    $  pig -useHCatalog  intro.pig
+
+    # send logs into file, so we can see our console output
+    $  pig -useHCatalog  intro.pig  2> logs
 ```
 
-## TIPS
+## Tips For Pig Development
 
 **To print/echo something from pig script**
 ```pig

@@ -2,7 +2,7 @@
 [Main Index](../../README.md)
 
 -----
-# Lab : Hive Customer Billing
+# Lab 3.2: Hive Customer Billing
 
 **Note : Replace MY_NAME appropriately throughout the lab.** 
 
@@ -37,8 +37,8 @@
 ## STEP 2:  Run query
 Lets count the number of rows in the table
 ```sql
-    > 
-    select count(*) from transactions;
+    hive> 
+        select count(*) from transactions;
 ```
 
 This will actually kick off a mapreduce job, and at the end you will get the count.

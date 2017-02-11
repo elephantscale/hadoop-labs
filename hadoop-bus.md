@@ -54,7 +54,6 @@ Labs
    - [3.3 - Hive join](3-hive/3.3-join/README.md)
    - [3.4 - Hive partitions](3-hive/3.4-partitions/README.md)
    - [3.5 - Hive text processing](3-hive/3.5-text/README.md)
-   
    - **Part II**
    - [3.6 - JSON format](3-hive/3.6-json/README.md)
    - [3.7 - Quartiles](3-hive/3.7-quartiles/README.md)

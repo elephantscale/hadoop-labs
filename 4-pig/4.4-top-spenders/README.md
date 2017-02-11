@@ -6,18 +6,22 @@
 # Pig Lab : Calculate Top-10 Customers
 
 ## Working Dir
-`MY_NAME/hadoop-dev-labs/4-pig/4.4-top-spenders`
+`MY_NAME/hadoop-labs/4-pig/4.4-top-spenders`
 
 **(Instructor : Answer  `/labs-solutions/hadoop/pig/billing-answer.pig`)**
 
+## Step 1 : Go to working directory
+```bash
+    $   cd MY_NAME/hadoop-labs/4-pig/4.4-top-spenders
+```
 
-## STEP 1:  Edit the Pig script 
-Edit file :    `~/MY_NAME/hadoop-dev-labs/4-pig/4.4-top-spenders/top-spenders.pig`.  
+## STEP 2:  Edit the Pig script 
+Edit file :    `~/MY_NAME/hadoop-labs/4-pig/4.4-top-spenders/top-spenders.pig`.  
 Fix TODO items and save the file.   
 And run the script as follows.
 
 ```bash
-    $  pig top-spenders.pig
+    $  pig top-spenders.pig  2> log
 ```
 
 

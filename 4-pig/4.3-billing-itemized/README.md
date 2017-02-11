@@ -6,18 +6,23 @@
 # Pig Lab : Calculate *itemized* customer invoice
 
 ## Working Dir
-`MY_NAME/hadoop-dev-labs/4-pig/4.3-billing-itemized`
+`MY_NAME/hadoop-labs/4-pig/4.3-billing-itemized`
 
 **(Instructor : Answer  `/labs-solutions/hadoop/pig/billing-answer.pig`)**
 
+## Step 1 : Go to working directory
 
-## STEP 1:  Edit the Pig script 
-Edit file :    `~/MY_NAME/hadoop-dev-labs/4-pig/4.3-billing-itemized/itemized.pig`.  
+```bash
+    $  cd MY_NAME/hadoop-labs/4-pig/4.3-billing-itemized
+```
+
+## STEP 2:  Edit the Pig script 
+Edit file :    `~/MY_NAME/hadoop-labs/4-pig/4.3-billing-itemized/itemized.pig`.  
 Fix TODO items and save the file.   
 And run the script as follows.
 
 ```bash
-    $  pig itemized.pig
+    $  pig itemized.pig  2> log
 ```
 
 
