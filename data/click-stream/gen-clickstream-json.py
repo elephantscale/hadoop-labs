@@ -9,7 +9,7 @@
 
 ## ----- config
 days=10
-entries_per_day=100000
+entries_per_day=1000000
 # file size calculations
 #  format     entries_per_day     file_size in MB
 #  csv       10000000             830 M file

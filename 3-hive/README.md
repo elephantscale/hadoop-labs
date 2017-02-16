@@ -63,13 +63,20 @@ New client for Hive2 Server.
 `beeline --help`  for more options.
 
 ## Hints
-* To see column names set the following property in hive shell
+* **To see column names**  
+Set the following property in hive shell
 ```sql
         set hive.cli.print.header=true;
 ```
 
-* To see current DB 
+* **To see current DB**  
 ```sql
          set hive.cli.print.current.db=true;
 ```
 Hive prompt will indicate the current db.
+
+*  **Disabling the logs**  
+Start hive in 'silent' mode by supplying '-S' option
+```bash
+    $   hive -S
+```

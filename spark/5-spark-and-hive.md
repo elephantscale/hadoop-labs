@@ -62,3 +62,16 @@ scala>
     sqlContext.sql("select action, count(*) as total from clickstream group by action").show
 ```
 
+
+## Step 5 : Query your tables
+
+```scala
+scala> 
+
+    // TODO : Change 'MY_NAME' appropriately
+    sqlContext.sql("select * from MY_NAME_db.transactions limit 10").show
+    sqlContext.sql("select * from MY_NAME_db.vendors limit 10").show
+
+```
+
+** ==> Join `transactions` table and `vendors` table and find out how much money is owed to vendors **

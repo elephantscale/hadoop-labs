@@ -67,3 +67,11 @@ Labs
    - [4.3 - Itemized billing](4-pig/4.3-billing-itemized/README.md)
    - [4.4 - Top 10](4-pig/4.4-top-spenders/README.md)
    - [4.5 - Join](4-pig/4.5-join/README.md)
+   
+5. **Spark**
+   - [5.1 - Spark Shell](spark/1-spark-shell.md)
+   - [5.2 - RDDs](spark/2-RDD.md)
+   - [5.3 - Caching](spark/3-caching.md)
+   - [5.4 - Spark SQL](spark/4-spark-sql.md)
+   - [5.5 - Spark and Hive](spark/5-spark-and-hive.md)
+   - [5.6 - Data formats](spark/6-data-formats.md)
