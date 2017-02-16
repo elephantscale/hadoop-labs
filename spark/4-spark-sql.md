@@ -86,10 +86,11 @@ Your output may look like this:
    
 ```
 
-**Count records where action = 'click'**  
+**Count records where action = 'clicked'**  
 ```scala
 
-    clickstream.filter("action = 'clicked'").count
+    // TODO: fill in ???
+    clickstream.filter("action = '???'").count
 ```
 
 Possible output
@@ -131,11 +132,11 @@ Possible output
 
 
 ## Step 7 : Load all JSON data
-Let's load all JSON files in `/data/clickstream/in-json` directory
+Let's load all JSON files in `/data/domains/in-json` directory
 
 ```scala
 
-    val clicks = sqlContext.read.json("/data/clickstream/in-json/")
+    val clicks = sqlContext.read.json("/data/domains/in-json/")
     clicks.count
 
     clicks.groupBy("domain").count.show
@@ -149,7 +150,7 @@ Let's load all JSON files in `/data/clickstream/in-json` directory
 **==> Load `domains` dataset and register it to table `domains`**  
 
 ```scala
-    val domainsDF = sqlContext.read.json("/data/click-stream/domain-info.json")
+    val domainsDF = sqlContext.read.json("/data/domains/in-json")
     domainsDF.show
     domainsDF.registerTempTable("domains")
 ```

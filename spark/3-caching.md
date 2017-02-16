@@ -22,7 +22,7 @@ Under `/data/twinkle` directory we have created some large data files for you.  
 ## STEP 2: Start Spark Server / Shell
 
 ```bash
-    $  spark-shell   --executor-memory 2G  --driver-memory 2G
+    $  spark-shell   --executor-memory 4G  --driver-memory 4G
 ```
 
 Also set the logging level to INFO (so Spark will print out job execution times on console)
