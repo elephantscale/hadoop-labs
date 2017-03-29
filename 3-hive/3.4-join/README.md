@@ -3,7 +3,7 @@
 
 -----
 
-# Lab 3.3 : Hive Joins
+# Lab 3.4 : Hive Joins
 
 ## Step 1 : Launch Hive client
 
