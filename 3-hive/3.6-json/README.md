@@ -40,7 +40,7 @@ With this you may create your table.
 
     hive >
         set hive.cli.print.current.db=true;
-        set hive.auto.convert.join = falsee;
+        set hive.auto.convert.join = false;
         
         use MY_NAME_db;
 
