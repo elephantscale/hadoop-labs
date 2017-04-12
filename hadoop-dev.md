@@ -40,7 +40,7 @@ Labs
   - [2 - Setup by student](setup-student.md)
 
 
-1. **Hadoop & HDFS** 
+1. **Hadoop & HDFS**
     - [1.1 - Hadoop Intro](1-hadoop-hdfs/1.1-hadoop.md)
     - [1.2 - HDFS Intro](1-hadoop-hdfs/1.2-hdfs.md)
 
@@ -53,8 +53,8 @@ Labs
    - [3.0 - Hive background](3-hive/README.md) - Read this first
    - [3.1 - Hive intro](3-hive/3.1-intro/README.md) or optionally [more challenging 3.1](3-hive/3.1-intro/README2.md)
    - [3.2 - Hive billing](3-hive/3.2-billing/README.md)
-   - [3.3 - Hive join](3-hive/3.3-join/README.md)
-   - [3.4 - Hive partitions](3-hive/3.4-partitions/README.md)
+   - [3.3 - Hive partitions](3-hive/3.3-partitions/README.md)
+   - [3.4 - Hive join](3-hive/3.4-join/README.md)
    - [3.5 - Hive text processing](3-hive/3.5-text/README.md)
    - **Part II**
    - [3.6 - JSON format](3-hive/3.6-json/README.md)

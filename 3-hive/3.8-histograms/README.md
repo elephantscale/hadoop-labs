@@ -27,17 +27,17 @@ Launch Hive shell
 
 Try these in Hive shell:
 ```sql
-
+    set hive.cli.print.header=true;
     set hive.cli.print.current.db=true;
     use MY_NAME_db;
-    
+
     select inline(histogram_numeric(amount, 5)) from transactions;
 ```
 
 What do the results mean?  How can this be used?
 
 --------------------------------
-Step 2: Perform a plot 
+Step 2: Perform a plot
 --------------------------------
 
 Visualize the numbers by creating an excel spreadsheet with the overall histogram numbers
@@ -47,7 +47,7 @@ Visualize the numbers by creating an excel spreadsheet with the overall histogra
 Step 3: Perform a histogram on account totals
 --------------------------------
 
-Find a histogram on account totals. Note that to do this, you have to first generate a table in a subquery 
+Find a histogram on account totals. Note that to do this, you have to first generate a table in a subquery
 to calcualate account totals, then perform the histogram as in step 1
 
 ```sql
@@ -64,11 +64,11 @@ Sometimes we want to do a binary binning exercise, for example, count transactio
 Unfortunately, using the histogram_numeric() function becomes difficult in this case, but we can easily do the following;
 
 ```sql
-   select count(CASE WHEN amount > 15.0 THEN amount END) AS gt_15, 
+   select count(CASE WHEN amount > 15.0 THEN amount END) AS gt_15,
    count(CASE WHEN amount <= 15.0 then amount END) as lt_15 from transactions;
 ```
 
-How could we figure out the same information PER vendor category? 
+How could we figure out the same information PER vendor category?
 HINT: Use a group by -- remember that vendor category is in the vendors table
 and and not the transactions table and so requires a join.
 

@@ -5,16 +5,16 @@
 
 # Lab 3.1: Hive Table Setup
 
-**Note : Replace MY_NAME appropriately throughout the lab.** 
+**Note : Replace MY_NAME appropriately throughout the lab.**
 
-**Hints :** 
+**Hints :**
 
 * To see column names set the following property in hive shell
 ```sql
         set hive.cli.print.header=true;
 ```
 
-* To see current DB 
+* To see current DB
 ```sql
          set hive.cli.print.current.db=true;
 ```
@@ -25,7 +25,7 @@ Hive prompt will indicate the current db.
 
 ## Step 1 : Hive vs. Beeline
 There are two shells for interacting with Hive.
-* Hive : oldest 
+* Hive : oldest
 * Beeline : newest, faster
 
 Read  [hive clients](../README.md) for more details.
@@ -40,13 +40,13 @@ Read  [hive clients](../README.md) for more details.
 
 ### Beeline Shell
 ```sql
-    
+
     $  beeline
     beeline>   
         !connect jdbc:hive2://
         -- no user/password, just hit enter for user / pass
         show databases;
-       
+
 ```
 
 ## Step 2: Data
@@ -81,7 +81,7 @@ And fire up Hive shell (Hive / Beeline)
 ```bash
     $  hive
 
-    # or 
+    # or
 
     $ beeline
 ```
@@ -103,7 +103,7 @@ Change 'MY_NAME' accordingly.
 
 ### Option 2 : Beeline
 ```sql
-    beeline > 
+    beeline >
         set hive.cli.print.current.db=true;
         show databases;
         create database MY_NAME_db;
@@ -127,7 +127,7 @@ Make sure to use your own DB.
 
 ### Option 2 : Beeline client
 ```sql
-    beeline > 
+    beeline >
         set hive.cli.print.current.db=true;
         show databases;
         !connect jdbc:hive2:///MY_NAME_db; -- change MY_NAME accordingly
@@ -137,7 +137,7 @@ Make sure to use your own DB.
 ### Transactions Table
 
 ```sql
-    > 
+    >
         CREATE EXTERNAL TABLE transactions (
             id INT,
             account_id INT,
@@ -197,8 +197,26 @@ Make sure to use your own DB.
 ```
 
 
+## Step 7: Understand table structure
+We can use `DESCRIBE` (short form `DESC`) command to see how tables are structured
 
-## STEP 7:  Run queries
+```sql
+  hive>
+      DESC  transactions;
+      DESC  accounts;
+      DESC  vendors;
+```
+
+To get more details we can use `EXTENDED` option.
+
+```sql
+  hive>
+    DESCRIBE EXTENDED transactions;
+```
+
+**=> Inspect the 'extended' output**
+
+## STEP 8:  Run queries
 Lets see data in table.
 ```sql
     >  
@@ -212,5 +230,3 @@ Lets see data in table.
 
         select * from vendors limit 10;
 ```
-
-

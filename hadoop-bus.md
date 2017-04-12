@@ -39,7 +39,7 @@ Labs
   - [Setup by instructor](setup-instructor.md) - To be completed by _instructor only_
 
 
-1. **Hadoop & HDFS** 
+1. **Hadoop & HDFS**
     - [1.1 - Hadoop Intro](1-hadoop-hdfs/1.1-hadoop.md)
     - [1.2 - HDFS Intro](1-hadoop-hdfs/1.2-hdfs.md) - demo by instructor
 
@@ -51,14 +51,16 @@ Labs
    - [3.0 - Hive background](3-hive/README.md) - Read this first
    - [3.1 - Hive intro](3-hive/3.1-intro/README.md)
    - [3.2 - Hive billing](3-hive/3.2-billing/README.md)
-   - [3.3 - Hive join](3-hive/3.3-join/README.md)
-   - [3.4 - Hive partitions](3-hive/3.4-partitions/README.md)
+   - [3.3 - Hive partitions](3-hive/3.3-partitions/README.md)
+   - [3.4 - Hive join](3-hive/3.4-join/README.md)
    - [3.5 - Hive text processing](3-hive/3.5-text/README.md)
    - **Part II**
    - [3.6 - JSON format](3-hive/3.6-json/README.md)
    - [3.7 - Quartiles](3-hive/3.7-quartiles/README.md)
    - [3.8 - Histograms](3-hive/3.8-histograms/README.md)
    - [3.9 - Tez](3-hive/3.9-tez/README.md)
+   - [3.10 - Data formats](3-hive/3.10-data-formats/README.md)
+   - [3.11 - Bonus : Optimize queries](3-hive/3.11-optimize/README.md)
 
 4. **Pig**
    - [4.0 - Setup by student](setup-student.md)
@@ -67,7 +69,7 @@ Labs
    - [4.3 - Itemized billing](4-pig/4.3-billing-itemized/README.md)
    - [4.4 - Top 10](4-pig/4.4-top-spenders/README.md)
    - [4.5 - Join](4-pig/4.5-join/README.md)
-   
+
 5. **Spark**
    - [5.1 - Spark Shell](spark/1-spark-shell.md)
    - [5.2 - RDDs](spark/2-RDD.md)
