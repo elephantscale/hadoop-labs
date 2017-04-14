@@ -25,54 +25,54 @@ Editors
 -------
 We recommend using a 'programmer's editor' to view these files. These editors have integrated file browser and allows navigating through files quickly.
 
-* For Windows : [Sublime](http://www.sublimetext.com/), [NodePad++](http://notepad-plus-plus.org/), [Textpad](http://www.textpad.com/)
+* For Windows : [Atom](https://atom.io), [Sublime](http://www.sublimetext.com/), [NodePad++](http://notepad-plus-plus.org/), [Textpad](http://www.textpad.com/)
 
-* For Mac : [Sublime](http://www.sublimetext.com/),  [TextWrangler](http://www.barebones.com/products/textwrangler/)
+* For Mac : [Atom](https://atom.io), [Sublime](http://www.sublimetext.com/),  [TextWrangler](http://www.barebones.com/products/textwrangler/)
 
-* For Linux : [Sublime](http://www.sublimetext.com/), GEdit, Vim
+* For Linux : [Atom](https://atom.io), [Sublime](http://www.sublimetext.com/), GEdit, Vim
 
+# Labs
 
-Labs
-----
+#### Setup
+- [Setup by instructor](setup-instructor.md) - To be completed by _instructor only_
 
-* **Setup**
-  - [Instructor Setup](setup-instructor.md) - To be completed by _instructor only_
+#### Hadoop & HDFS
+- [HADOOP-1 : Hadoop Intro](intro/1-hadoop-intro.md)
+- [HDFS-1 : HDFS Intro](hdfs/1-hdfs-intro.md) - demo by instructor
 
+#### MapReduce - Optional demo by instructor
+- [MR-1 : MapReduce GREP](mapreduce/1-grep.md)
 
-1. **Hadoop & HDFS** 
-    - [1.1 - Hadoop Intro](1-hadoop-hdfs/1.1-hadoop.md)
-    - [1.2 - HDFS Intro](1-hadoop-hdfs/1.2-hdfs.md) - demo by instructor
+#### Hive
+- **Part I**
+- [HIVE-0 : Hive background](hive/README.md) - Read this first
+- [HIVE-1 : Hive intro](hive/1-intro.md)
+- [HIVE-2 : Hive billing](hive/2-billing.md)
+- [HIVE-3 : Hive partitions](hive/3-partitions.md)
+- [HIVE-4 : Hive join](hive/4-join.md)
+- [HIVE-5 : Hive text processing](hive/5-text.md)
+- **Part II**
+- [HIVE-6 : JSON format](hive/6-json.md)
+- [HIVE-7 : Quartiles](hive/7-stats.md)
+- [HIVE-8 : Histograms](hive/8-histograms.md)
+- [HIVE-9 : Tez](hive/9-tez.md)
+- [HIVE-10 : Data formats](hive/10-data-formats.md)
+- [HIVE-11 : Bonus : Optimize queries](hive/11-optimize.md)
 
-2. **MapReduce**  
-    - Optional Demo by instructor (time permitting)  
-     [2.1 - MapReduce GREP](2-mapreduce/2.1-grep.md)
+#### Impala (only on Cloudera Distribution)
+- Setup: We will use a Cloudera cluster for Impala.
+  - 1 : Instructor only : Run [instructor setup](setup-instructor.md) on cluster
+  - 2 : Students : Create Hive tables using [setup-ccdata](setup-ccdata.md)
+- [IMPALA-1 : Intro](impala/1-intro.md)
+- [IMPALA-2 : Performance](impala/2-perf.md)
 
-3. **Hive**
-   - **Part I**
-   - [3.0 - Hive background](3-hive/README.md) - Read this first
-   - [3.1 - Hive intro](3-hive/3.1-intro/README.md)
-   - [3.2 - Hive billing](3-hive/3.2-billing/README.md)
-   - [3.3 - Hive join](3-hive/3.3-join/README.md)
-   - [3.4 - Hive partitions](3-hive/3.4-partitions/README.md)
-   - [3.5 - Hive text processing](3-hive/3.5-text/README.md)
-   - **Part II**
-   - [3.6 - JSON format](3-hive/3.6-json/README.md)
-   - [3.7 - Quartiles](3-hive/3.7-quartiles/README.md)
-   - [3.8 - Histograms](3-hive/3.8-histograms/README.md)
-   - [3.9 - Tez](3-hive/3.9-tez/README.md)
+#### Spark
+- [SPARK-1 : Spark Shell](spark/1-spark-shell.md)
+- [SPARK-2 : RDDs](spark/2-RDD.md)
+- [SPARK-3 : Caching](spark/3-caching.md)
+- [SPARK-4 : Spark SQL](spark/4-spark-sql.md)
+- [SPARK-5 : Spark and Hive](spark/5-spark-and-hive.md)
+- [SPARK-6 : Data formats](spark/6-data-formats.md)
 
-4. **Impala** (only on Cloudera Distribution)
-   - **Setup**: We will use a Cloudera cluster for Impala.
-      - 1 : Instructor only : Run [instructor setup](setup-instructor.md) on cluster
-      - 2 : Students : Create Hive tables using [setup-ccdata](setup-ccdata.md)
-   - [4.1 - Intro](impala/1-intro.md)
-   - [4.2 - Performance](impala/2-perf.md)
-
-5. Spark
-   - 5.1 - Spark Setup (*Instructor only*).  
-     Follow steps in [setup-clickstream](setup-clickstream.md) 
-   - 5.2 - [Dataframes](spark/1-data-frame.md)
-   - 5.3 - [Spark & Hive](spark/2-spark-and-hive.md)
-
-6. Workshops
-   - 6.1 : [optimize query](workshops/1-optimize-query.md)
+#### Workshops
+- [WORKSHOP-1 : optimize query](workshops/1-optimize-query.md)

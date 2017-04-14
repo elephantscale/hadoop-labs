@@ -25,56 +25,59 @@ Editors
 -------
 We recommend using a 'programmer's editor' to view these files. These editors have integrated file browser and allows navigating through files quickly.
 
-* For Windows : [Sublime](http://www.sublimetext.com/), [NodePad++](http://notepad-plus-plus.org/), [Textpad](http://www.textpad.com/)
+* For Windows : [Atom](https://atom.io), [Sublime](http://www.sublimetext.com/), [NodePad++](http://notepad-plus-plus.org/), [Textpad](http://www.textpad.com/)
 
-* For Mac : [Sublime](http://www.sublimetext.com/),  [TextWrangler](http://www.barebones.com/products/textwrangler/)
+* For Mac : [Atom](https://atom.io), [Sublime](http://www.sublimetext.com/),  [TextWrangler](http://www.barebones.com/products/textwrangler/)
 
-* For Linux : [Sublime](http://www.sublimetext.com/), GEdit, Vim
+* For Linux : [Atom](https://atom.io), [Sublime](http://www.sublimetext.com/), GEdit, Vim
+
+# Labs
+
+#### Setup
+- [1 - Setup by instructor](setup-instructor.md) - To be completed by _instructor only_
+- [2 - Setup by student](setup-student.md)
+
+#### Hadoop & HDFS
+- [HADOOP-1 : Hadoop Intro](intro/1-hadoop-intro.md)
+- [HDFS-1 : HDFS Intro](hdfs/1-hdfs-intro.md) - demo by instructor
+
+#### MapReduce - Optional demo by instructor
+- [MR-1 : MapReduce GREP](mapreduce/1-grep.md)
+- [MR-2 : MapReduce Wordcount](mapreduce/2-wordcount.md)
+
+#### Hive
+- **Part I**
+- [HIVE-0 : Hive background](hive/README.md) - Read this first
+- [HIVE-1 : Hive intro](hive/1-intro.md)
+- [HIVE-2 : Hive billing](hive/2-billing.md)
+- [HIVE-3 : Hive partitions](hive/3-partitions.md)
+- [HIVE-4 : Hive join](hive/4-join.md)
+- [HIVE-5 : Hive text processing](hive/5-text.md)
+- **Part II**
+- [HIVE-6 : JSON format](hive/6-json.md)
+- [HIVE-7 : Quartiles](hive/7-stats.md)
+- [HIVE-8 : Histograms](hive/8-histograms.md)
+- [HIVE-9 : Tez](hive/9-tez.md)
+- [HIVE-10 : Data formats](hive/10-data-formats.md)
+- [HIVE-11 : Bonus : Optimize queries](hive/11-optimize.md)
+
+#### Pig
+- [PIG-0 : Setup by student](setup-student.md)
+- [PIG-1 : intro](pig/1-intro.md)
+- [PIG-2 : billing](pig/2-billing.md)
+- [PIG-3 : Itemized billing](pig/3-itemized.md)
+- [PIG-4 : Top 10](pig/4-top.md)
+- [PIG-5 : Join](pig/5-join.md)
+
+#### HBase
+- [HBASE-1 : intro](hbase/1-intro.md)
+- [HBASE_2 : API](hbase/2-api/README.md)
 
 
-Labs
-----
-
-* **Setup**
-  - [ 1 - Setup by instructor](setup-instructor.md) - To be completed by _instructor only_
-  - [2 - Setup by student](setup-student.md)
-
-
-1. **Hadoop & HDFS**
-    - [1.1 - Hadoop Intro](1-hadoop-hdfs/1.1-hadoop.md)
-    - [1.2 - HDFS Intro](1-hadoop-hdfs/1.2-hdfs.md)
-
-2. **MapReduce**
-    - [2.1 - MapReduce GREP](2-mapreduce/2.1-grep.md)
-    - [2.2 - MapReduce Wordcount](2-mapreduce/2.2-wordcount.md)
-
-3. **Hive**
-   - **Part I**
-   - [3.0 - Hive background](3-hive/README.md) - Read this first
-   - [3.1 - Hive intro](3-hive/3.1-intro/README.md) or optionally [more challenging 3.1](3-hive/3.1-intro/README2.md)
-   - [3.2 - Hive billing](3-hive/3.2-billing/README.md)
-   - [3.3 - Hive partitions](3-hive/3.3-partitions/README.md)
-   - [3.4 - Hive join](3-hive/3.4-join/README.md)
-   - [3.5 - Hive text processing](3-hive/3.5-text/README.md)
-   - **Part II**
-   - [3.6 - JSON format](3-hive/3.6-json/README.md)
-   - [3.7 - Quartiles](3-hive/3.7-quartiles/README.md)
-   - [3.8 - Histograms](3-hive/3.8-histograms/README.md)
-   - [3.9 - Tez](3-hive/3.9-tez/README.md)
-
-4. **Pig**
-   - [4.1 - intro](4-pig/4.1-intro/README.md)
-   - [4.2 - billing](4-pig/4.2-billing/README.md)
-   - [4.3 - Itemized billing](4-pig/4.3-billing-itemized/README.md)
-   - [4.4 - Top 10](4-pig/4.4-top-spenders/README.md)
-   - [4.5 - Join](4-pig/4.5-join/README.md)
-
-5. **HBase**
-   - [5.1 - intro](5-hbase/5.1-hbase-intro.md)
-   - [5.2 - API](5-hbase/5.2-api/README.md)
-
-6. **Spark**
-   - [6.1 - Spark Shell](spark/1-spark-shell.md)
-   - [6.2 - RDDs](spark/2-RDD.md)
-   - [6.3 - Spark SQL](spark/3-spark-sql.md)
-   - [6.4 - Spark and Hive](spark/4-spark-and-hive.md)
+#### Spark
+- [SPARK-1 : Spark Shell](spark/1-spark-shell.md)
+- [SPARK-2 : RDDs](spark/2-RDD.md)
+- [SPARK-3 : Caching](spark/3-caching.md)
+- [SPARK-4 : Spark SQL](spark/4-spark-sql.md)
+- [SPARK-5 : Spark and Hive](spark/5-spark-and-hive.md)
+- [SPARK-6 : Data formats](spark/6-data-formats.md)
