@@ -1,4 +1,4 @@
-CREATE EXTERNAL TABLE clickstream (
+CREATE EXTERNAL TABLE x_clickstream (
     ts BIGINT,
     ip STRING,
     userid STRING,
@@ -14,7 +14,7 @@ LOCATION '/data/clickstream/in' ;
 
 
 
-CREATE EXTERNAL TABLE domains (
+CREATE EXTERNAL TABLE x_domains (
     domain STRING,
     category STRING )
 ROW FORMAT DELIMITED
