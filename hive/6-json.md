@@ -28,7 +28,7 @@ You may need to refer to the JSON serde jar. The exact location will vary depend
 For example, a recent version of cloudera CDH had the jar in the following location:
 
 ```sql
-ADD JAR /opt/cloudera/parcels/CDH/jars/hive-hcatalog-core-1.1.0-cdh5.10.0.jar
+ADD JAR /opt/cloudera/parcels/CDH/jars/hive-hcatalog-core-1.1.0-cdh5.11.0.jar
 ```
 
 With this you may create your table.
