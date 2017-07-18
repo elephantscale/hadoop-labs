@@ -82,3 +82,6 @@ We recommend using a 'programmer's editor' to view these files. These editors ha
 - [SPARK-4 : Spark SQL](spark/4-spark-sql.md)
 - [SPARK-5 : Spark and Hive](spark/5-spark-and-hive.md)
 - [SPARK-6 : Data formats](spark/6-data-formats.md)
+
+#### Workshops
+- [WORKSHOP-1 : optimize query](workshops/1-optimize-query.md)
