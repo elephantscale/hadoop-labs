@@ -57,7 +57,7 @@ account id?  We have to do a subquery.
 
    SELECT  explode(percentile_approx(t1.total,array(0.01,0.20,0.40,0.60,0.80)))
     FROM
-   (select id, sum(amount) as total from
+   (select account_id, sum(amount) as total from
     transactions
     group by account_id) t1
     limit 10;
