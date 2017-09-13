@@ -59,7 +59,7 @@ account id?  We have to do a subquery.
     FROM
    (select id, sum(amount) as total from
     transactions
-    group by id) t1
+    group by account_id) t1
     limit 10;
 
 ```
