@@ -83,8 +83,8 @@ In `vendor` table you will find a column `swipe_rate`.  This is the rate they pa
 
 For example,
 * if swipe_rate is 3%
-* customer paid $100
-* the vendor gets  : $100 * (1 - 3/100) = $97
+* customer paid $1000
+* the vendor gets  : $1000 * (1 - 3/100) = $970
 
 Calculate the final amount of money to be paid to each vendor.
 

@@ -5,23 +5,7 @@
 
 # Lab HIVE-3 : Hive Partitions
 
-## Step 1: Stage the data in HDFS
-We can load data into Hive
-* from local computers
-* and from HDFS
-We will stage our data in HDFS.
-
-Execute these in shell (not in Hive shell)
-```bash
-  # make an staging directory
-  $ hdfs dfs -mkdir -p MY_NAME/staging/
-
-  # copy some files into staging
-  $ hdfs dfs -cp /data/transactions/in/transaction-2015-01-01.csv    MY_NAME/staging/
-  $ hdfs dfs -cp /data/transactions/in/transaction-2015-01-02.csv    MY_NAME/staging/
-```
-
-## Step 2: Start Hive Shell
+## Step 1: Start Hive Shell
 ```bash
 
     $   hive
@@ -29,11 +13,28 @@ Execute these in shell (not in Hive shell)
     hive>   
         show databases;
 ```
+## Step 2: Stage the data in HDFS
+We can load data into Hive
+* from local computers
+* and from HDFS
+We will stage our data in HDFS.
 
+Execute these in hive shell.  
+**=> Fix 'MY_NAME' in table definition below**
+
+```sql
+  -- make an staging directory
+  dfs  -mkdir -p MY_NAME/staging/  ;
+
+  -- copy some files into staging
+  dfs -cp /data/transactions/in/transaction-2015-01-01.csv    MY_NAME/staging/  ;
+
+  dfs -cp /data/transactions/in/transaction-2015-01-02.csv    MY_NAME/staging/  ;
+```
 
 ## Step 3: Create partition table
 
-**=> Fix 'MY_NAME' in table definition below **
+**=> Fix 'MY_NAME' in table definition below**
 
 ```sql
     hive>
@@ -81,9 +82,12 @@ In this step, we are going to load data into partitions.
 
 Note :  We have to specify the partition.
 
-**=> Using HDFS browser, check the staging directory.  Are the data files still there?  why / why not? **
+**Check the files in staging directory, notice they have been moved**
 
-
+```
+    hive>
+        dfs -ls  MY_NAME/staging/ ;
+```
 
 ## STEP 5:  Using partitions
 Lets run some queries using partitions
@@ -106,7 +110,7 @@ Note the count results.
 
 
 ## STEP 6:  Verify data layount in HDFS
-You can browse `/user/ec2-user/MY_NAME/transactions/in-part/`  directory or use
 ```
-    $   hdfs dfs -ls -R   /user/ec2-user/MY_NAME/transactions/in-part/
+    >
+      dfs -ls -R   MY_NAME/transactions/in-part/ ;
 ```
