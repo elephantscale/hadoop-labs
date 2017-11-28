@@ -50,21 +50,21 @@ Read  [hive clients](../README.md) for more details.
 ```
 
 ## Step 2: Data
-### [Transactions.csv](../../data/cc-data/transactions.csv) (<- click to download)
+### [Transactions.csv](../data/cc-data/transactions.csv) (<- click to download)
 ```
 1,1,5,2015-01-01 00:00:00,El Paso,TX,62.81
 2,2,7,2015-01-01 00:00:00,Pittsburgh,PA,157.33
 3,2,10,2015-01-01 00:00:01,Austin,TX,14.86
 ```
 
-### [accounts.csv](../../data/cc-data/accounts.csv) (<- click to download)
+### [accounts.csv](../data/cc-data/accounts.csv) (<- click to download)
 ```
 1,1,1,Ryan,Johnston,rjohnston0@mayoclinic.com,Male,5 Hintze Terrace,Laredo,TX,78044
 2,2,9,Todd,Martin,tmartin1@europa.eu,Male,878 Sheridan Point,Columbia,SC,29215
 3,3,1,Sharon,Martin,smartin2@archive.org,Female,2 Fremont Plaza,Lubbock,TX,79452
 ```
 
-### [vendors.csv](../../data/cc-data/vendors.csv) (<- click to download)
+### [vendors.csv](../data/cc-data/vendors.csv) (<- click to download)
 ```
 1,Walmart,Bentonville,AR,General,2.0
 2,Kroger,Cincinatti,OH,Grocery,2.4
