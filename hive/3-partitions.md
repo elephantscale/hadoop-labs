@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../../assets/css/main.css'/>
+<link rel='stylesheet' href='../assets/css/main.css'/>
 [Main Index](../../README.md)
 
 -----
@@ -23,6 +23,7 @@ Execute these in hive shell.
 **=> Fix 'MY_NAME' in table definition below**
 
 ```sql
+hive>
   -- make an staging directory
   dfs  -mkdir -p MY_NAME/staging/  ;
 
@@ -106,11 +107,9 @@ Lets run some queries using partitions
 
 Note the count results.
 
-**==> Exit hive shell by typing `Ctrl+d`  (Control and 'd' key)**  
-
 
 ## STEP 6:  Verify data layount in HDFS
 ```
-    >
+    hive>
       dfs -ls -R   MY_NAME/transactions/in-part/ ;
 ```
