@@ -122,16 +122,16 @@ Replace MY_NAME with yours.
 Verify the file has zero length. Replace MY_NAME with yours.
 
     $  hdfs dfs  -ls MY_NAME
-*=> Q : How many blocks does file z have? *
+*=> Q : How many blocks does file z have?*
 
-### Step 11: List all the data nodes using hdfs command.
+### BONUS 1: List all the data nodes using hdfs command.
 
 Hint 1: Find the right 'sub command' for hdfs.
 Hint 2 : you may lack permissions. Try the command with:
 
     sudo -u hdfs   the-command
 
-### Step 12: Block locations
+### BONUS 2: Block locations
 
 Find out which machine has the blocks for a particular file.
 Hint fsck
