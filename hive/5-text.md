@@ -119,6 +119,18 @@ Find the word the follows the word `american`
         FROM sotu ;
 ```
 
+### Feds Meeting minute
+Find the most used adjective used to describe the word `market`.
+
+```sql
+    hive>
+        SELECT explode(context_ngrams(sentences(lower(line)),
+        array(null, "markets"), 30))
+        FROM fomc ;
+```
+
+Also find what words follow the word `markets`
+
 ## STEP 6: 'Visualizing' text
 'Word Clouds' are very interesting way of visualizing text.  
 Try these word cloud generators  

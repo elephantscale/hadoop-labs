@@ -55,7 +55,11 @@ hive>
         ROW FORMAT DELIMITED
         FIELDS TERMINATED BY ','
         stored as textfile
-        LOCATION '/user/ec2-user/MY_NAME/transactions/in-part/'  ; -- <-- change MYNAME
+        LOCATION '/user/LOGIN_NAME/MY_NAME/transactions/in-part/'  ; -- <-- change LOGIN_NAME & MYNAME
+        
+        -- For CentOS LOGIN_NAME = ec2-user
+        -- for Ubuntu LOGIN_NAME = ubuntu
+        -- MY_NAME = use your name, something unique
 
 
         -- see table structure

@@ -3,10 +3,10 @@
 
 -----
 
-#Lab Hive-7: Hive Stats
+# Lab Hive-7: Hive Stats
 
 ### Overview
-Quartiles and other Statistiscal data
+Basic statistics in hive.
 
 ### Run time
 approx. 20-30 minutes
@@ -36,7 +36,7 @@ Try these in Hive shell:
     select account_id,  AVG(amount)  from transactions group by account_id limit 10;
 ```
 
-## STEP 2:  find Quartiles
+## STEP 2:  Find quartiles
 
 ```sql
   hive>
@@ -74,5 +74,5 @@ value and 50% above.
 
 HINT: The percentile function will help here.
 
-## STEP 4:  find mean and quartiles by vendor
+## STEP 4:  Find mean and quartiles by vendor
 We've taken mean and quartile by account id.  How would we do the same by vendor?

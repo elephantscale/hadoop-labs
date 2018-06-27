@@ -85,7 +85,11 @@ Create an invoice table as follows:
     ROW FORMAT DELIMITED
     FIELDS TERMINATED BY ','
     stored as textfile
-    LOCATION '/user/ec2-user/MY_NAME/invoices' ; -- <-- change MY_NAME
+    LOCATION '/user/LOGIN_NAME/MY_NAME/invoices' ; -- <-- change LOGIN_NAME & MY_NAME
+
+    -- For CentOS LOGIN_NAME = ec2-user
+    -- for Ubuntu LOGIN_NAME = ubuntu
+    -- MY_NAME = use your name, something unique    
 
 ```
 
