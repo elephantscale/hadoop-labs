@@ -29,10 +29,12 @@ You may need to refer to the JSON serde jar. The exact location will vary depend
 For example, a recent version of cloudera CDH had the jar in the following location:
 
 ```sql
-ADD JAR /opt/cloudera/parcels/CDH/jars/hive-hcatalog-core-1.1.0-cdh5.15.0.jar
+hive>
+    ADD JAR /opt/cloudera/parcels/CDH/jars/hive-hcatalog-core-1.1.0-cdh5.15.0.jar
 ```
 
-If the above doesn't work, please try this:
+If the above doesn't work, please try this:  
+On Linux shell...
 ```bash
     $  find /opt/cloudera/parcels/CDH/jars  | grep hive-hcatalog-core
 
