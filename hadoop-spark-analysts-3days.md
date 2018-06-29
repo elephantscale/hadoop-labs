@@ -1,7 +1,6 @@
 <link rel='stylesheet' href='assets/css/main.css'/>
 
-Hadoop For Business Analysts
-============================
+# Hadoop and Spark For Business Analysts (3 days)
 
 Viewing the files:
 -----------------
@@ -18,18 +17,7 @@ If this link does not work, search for markdown-preview-plus in https://chrome.g
 
 * Once installed, go to 'Window --> Extensions' menu of Chrome ;   Find 'Markdown Preview Plus' plugin ;  set 'Allow access to file urls'
 
-* Open any *.md file using Chrome (File --> Open)
-
-
-Editors
--------
-We recommend using a 'programmer's editor' to view these files. These editors have integrated file browser and allows navigating through files quickly.
-
-* For Windows : [Atom](https://atom.io), [Sublime](http://www.sublimetext.com/), [NodePad++](http://notepad-plus-plus.org/), [Textpad](http://www.textpad.com/)
-
-* For Mac : [Atom](https://atom.io), [Sublime](http://www.sublimetext.com/),  [TextWrangler](http://www.barebones.com/products/textwrangler/)
-
-* For Linux : [Atom](https://atom.io), [Sublime](http://www.sublimetext.com/), GEdit, Vim
+* Open any md file using Chrome (File --> Open)
 
 
 # Labs
@@ -67,13 +55,6 @@ We recommend using a 'programmer's editor' to view these files. These editors ha
 - [HIVE-10 : Data formats](hive/10-data-formats.md)
 - [HIVE-11 : Bonus : Optimize queries](hive/11-optimize.md)
 
-#### Pig
-- [PIG-0 : Setup by student](setup-student.md)
-- [PIG-1 : intro](pig/1-intro.md)
-- [PIG-2 : billing](pig/2-billing.md)
-- [PIG-3 : Itemized billing](pig/3-itemized.md)
-- [PIG-4 : Top 10](pig/4-top.md)
-- [PIG-5 : Join](pig/5-join.md)
 
 #### Spark
 - [SPARK-1 : Spark Shell](spark/1-spark-shell.md)

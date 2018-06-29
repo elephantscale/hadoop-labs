@@ -18,7 +18,7 @@ If this link does not work, search for markdown-preview-plus in https://chrome.g
 
 * Once installed, go to 'Window --> Extensions' menu of Chrome ;   Find 'Markdown Preview Plus' plugin ;  set 'Allow access to file urls'
 
-* Open any *.md file using Chrome (File --> Open)
+* Open any .md file using Chrome (File --> Open)
 
 
 Editors
@@ -36,8 +36,10 @@ We recommend using a 'programmer's editor' to view these files. These editors ha
 
 There are 3 tracks:
 
-### [A - Hadoop for Business Users](hadoop-bus.md)
+### [A - Hadoop for Business Users - 2 days](hadoop-analysts-2days.md)
 
-### [B - Hadoop for Developers](hadoop-dev.md)
+### [B - Hadoop and Spark for Business Users - 3 days](hadoop-spark-analysts-3days.md)
 
-### [C - SQL on Hadoop](hadoop-sql.md)
+### [C - Hadoop for Developers - 4 days](hadoop-dev.md)
+
+### [D - SQL on Hadoop - 3 days](hadoop-sql.md)
