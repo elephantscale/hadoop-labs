@@ -3,7 +3,7 @@
 
 -----
 
-# Lab HIVE-10: Modern Data Formats (Parquet / ORC)
+# Lab HIVE-9: Modern Data Formats (Parquet / ORC)
 
 
 ### Overview

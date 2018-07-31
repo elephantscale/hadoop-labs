@@ -3,7 +3,7 @@
 
 -----
 
-# Lab HIVE-5: Analyzing Text Data
+# Lab HIVE-10: Analyzing Text Data
 
 
 ## Datasets To Analyze

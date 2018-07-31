@@ -3,7 +3,7 @@
 
 -----
 
-# Lab Hive-8: Hive Histograms
+# Lab Hive-7: Hive Histograms
 
 
 ### Overview
