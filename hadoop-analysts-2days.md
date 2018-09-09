@@ -29,14 +29,7 @@ If this link does not work, search for markdown-preview-plus in https://chrome.g
 - [HADOOP-1 : Hadoop Intro](intro/1-hadoop-intro.md)
 - [HDFS-1 : HDFS Intro](hdfs/1-hdfs-intro.md) - demo by instructor
 
-#### MapReduce - Optional demo by instructor
-- [MR-1 : MapReduce GREP](mapreduce/1-grep.md)
-
-#### Hadoop & HDFS
-- [HADOOP-1 : Hadoop Intro](intro/1-hadoop-intro.md)
-- [HDFS-1 : HDFS Intro](hdfs/1-hdfs-intro.md) - demo by instructor
-
-#### MapReduce - Optional demo by instructor
+#### [Optional] MapReduce - demo by instructor
 - [MR-1 : MapReduce GREP](mapreduce/1-grep.md)
 
 #### Hive
