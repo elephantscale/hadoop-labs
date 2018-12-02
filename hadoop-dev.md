@@ -18,7 +18,7 @@ If this link does not work, search for markdown-preview-plus in https://chrome.g
 
 * Once installed, go to 'Window --> Extensions' menu of Chrome ;   Find 'Markdown Preview Plus' plugin ;  set 'Allow access to file urls'
 
-* Open any *.md file using Chrome (File --> Open)
+* Open any .md file using Chrome (File --> Open)
 
 
 Editors
@@ -46,20 +46,19 @@ We recommend using a 'programmer's editor' to view these files. These editors ha
 - [MR-2 : MapReduce Wordcount](mapreduce/2-wordcount.md)
 
 #### Hive
-- **Part I**
 - [HIVE-0 : Hive background](hive/README.md) - Read this first
 - [HIVE-1 : Hive intro](hive/1-intro.md)
 - [HIVE-2 : Hive billing](hive/2-billing.md)
 - [HIVE-3 : Hive partitions](hive/3-partitions.md)
 - [HIVE-4 : Hive join](hive/4-join.md)
-- [HIVE-5 : Hive text processing](hive/5-text.md)
-- **Part II**
+- [HIVE-5 : Stats](hive/5-stats.md)
 - [HIVE-6 : JSON format](hive/6-json.md)
-- [HIVE-7 : Quartiles](hive/7-stats.md)
-- [HIVE-8 : Histograms](hive/8-histograms.md)
-- [HIVE-9 : Tez](hive/9-tez.md)
-- [HIVE-10 : Data formats](hive/10-data-formats.md)
+- [HIVE-7 : Quartiles](hive/7-histograms.md)
+- [HIVE-8 : Spark & Tez Engines](hive/8-engines.md)
+- [HIVE-9 : Data formats](hive/9-data-formats.md)
+- [HIVE-10 : Hive text processing](hive/10-text.md)
 - [HIVE-11 : Bonus : Optimize queries](hive/11-optimize.md)
+
 
 #### Pig
 - [PIG-0 : Setup by student](setup-student.md)

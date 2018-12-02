@@ -3,7 +3,7 @@
 
 -----
 
-#Lab HIVE-6: JSON in Hive
+# Lab HIVE-6: JSON in Hive
 
 ### Overview
 Apply offers from offers table

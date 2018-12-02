@@ -6,21 +6,19 @@
 
 ## 1 - Copy labs to cluster
 ```bash
-
     # target dir is :  ~/a
-    rsync -avz -e ssh ~/ElephantScale/hadoop-labs   ec2-user@host-name:a
+    rsync -avz -e ssh hadoop-labs   user@HADOP-HOST
     #or
-    scp -r ~/ElephantScale/hadoop-labs   ec2-user@host-name:a
-
+    scp -r hadoop-labs   user@HADOOP_HOST
 ```
 
 ## 2 - Execute the setup script
 
 ``` bash
-    $  cd  ~/a/hadoop-labs/scripts
+    $  cd  ~/hadoop-labs/scripts
 
     $  ./setup-data.sh
-
 ```
 
 ## 3 - Verify data in HDFS UI
+In HDFS UI, go to `/data` directory.
