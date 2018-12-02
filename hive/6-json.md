@@ -13,7 +13,7 @@ Apply offers from offers table
 approx. 20-30 minutes
 
 ## JSON Data (Offers.json)
-Our [offers.json](../../data/cc-data/offers.json) (click the link to download)
+Our [offers.json](/data/cc-data/offers.json) (click the link to download)
 looks like this:
 
 ```json
@@ -39,8 +39,9 @@ On Linux shell...
     $  find /opt/cloudera/parcels/CDH/jars  | grep hive-hcatalog-core
 
     ...
-    # pick this one
-    /opt/cloudera/parcels/CDH/jars/hive-hcatalog-core-1.1.0-cdh5.15.0.jar
+    # pick this one  
+    /opt/cloudera/parcels/CDH/jars/hive-hcatalog-core-2.1.1-cdh6.0.1.jar
+
     ...
 
 ```
