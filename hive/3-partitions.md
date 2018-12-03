@@ -1,4 +1,5 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
+
 [Main Index](../../README.md)
 
 -----
@@ -56,7 +57,7 @@ hive>
         FIELDS TERMINATED BY ','
         stored as textfile
         LOCATION '/user/LOGIN_NAME/MY_NAME/transactions/in-part/'  ; -- <-- change LOGIN_NAME & MYNAME
-        
+
         -- For CentOS LOGIN_NAME = ec2-user
         -- for Ubuntu LOGIN_NAME = ubuntu
         -- MY_NAME = use your name, something unique
@@ -109,7 +110,7 @@ Lets run some queries using partitions
         select count(*) from transactions_p where dt='2015-01-02';
 ```
 
-Note the count results.
+**=>Note the count results.**
 
 
 ## STEP 6:  Verify data layount in HDFS

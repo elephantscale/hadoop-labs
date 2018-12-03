@@ -1,4 +1,5 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
+
 [Main Index](../../README.md)
 
 -----
@@ -43,11 +44,11 @@ Lets count the number of rows in the table
 
 This will actually kick off a mapreduce job, and at the end you will get the count.
 
-** Q : how many mappers and how many reducers? **   
+**Q : how many mappers and how many reducers?**   
 
-** Q : Can you explain how to do count(*) in MR? **  
+**Q : Can you explain how to do count(*) in MR?**  
 
-** Inspect the YARN Resource Manager UI.  Can you spot your query?**
+**Inspect the YARN Resource Manager UI.  Can you spot your query?**
 
 
 ## STEP 3: Query data

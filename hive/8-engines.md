@@ -1,5 +1,7 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
+
 [Main Index](../../README.md)
+
 -----
 # Lab HIVE-9: Using Hive with Tez and Spark Engines
 

@@ -1,4 +1,5 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
+
 [Main Index](../../README.md)
 
 -----
@@ -12,7 +13,7 @@ Oldest, works reasonably well.
 
     $   hive
 
-    hive> 
+    hive>
         show databases;
         use MY_db;  -- select a db
         show tables;
@@ -26,7 +27,7 @@ New client for Hive2 Server.
 ```sql
     $  beeline
 
-    beeline> 
+    beeline>
         -- connecting to default Hive server
         !connect jdbc:hive2://
 

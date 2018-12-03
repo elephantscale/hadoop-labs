@@ -1,7 +1,8 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
+
 [main index](../README.md)
 
----- 
+----
 
 # HBase Intro
 
@@ -30,7 +31,7 @@ On terminal invoke 'hbase'
     Usage: hbase <command>
 ```
 
-**=> Q : Find out the version of hbase using CLI **  
+**=> Q : Find out the version of hbase using CLI**  
 
 
 ## STEP 3: Hbase Shell
@@ -38,7 +39,7 @@ Invoke hbase shell in a terminal
 ```
     $ hbase shell
 ```
-    
+
 Try the 'help' command in HBase shell prompt
 ```
     hbase> help
@@ -91,7 +92,7 @@ Inspect the output produced by HBase
 ## STEP 8: Insert Some Rows Into `MY_NAME_test` Table
 Put command works like this:
 ```
-    put <table name>  <row key>   <column_famly : column>    <value>
+    put <table name> , <row key> ,  <column_famly : column> ,  <value>
 ```
 Here is a sample usage:
 ```
@@ -106,7 +107,7 @@ See the contents of table using `scan`
 
 Insert few more rows
 ```
-    hbase> 
+    hbase>
         put 'MY_NAME_test', 'r1', 'd:c2', 'bar'
         put 'MY_NAME_test', 'r2', 'd:c1', 'baz'
 ```
@@ -149,7 +150,7 @@ Hint : Try `help 'scan'`
 
 Scan the table.  What value do see for  `r1:d:c1` ?
 
-**=> Q : can you see the old value of `r1:d:c1` ? **  
+**=> Q : can you see the old value of `r1:d:c1` ?**  
 Hint : `help 'scan'`  (look at VERSIONS option)
 ```
     > scan 'table', {VERSIONS => 3}
@@ -173,19 +174,19 @@ Do a `scan` after the delete.
 ## STEP 14: Examine The Tables In HBase UI
 Look at the user tables in HBase UI?  
 Click on them and explore.   
-** => Q : How many regions do you see now?  Are they distributed evenly across the cluster? **   
+**=> Q : How many regions do you see now?  Are they distributed evenly across the cluster?**   
 
 
 
 ## STEP 15: Examining HBase Files in HDFS
-HBase stores data in HDFS. 
+HBase stores data in HDFS.
 Open HDFS Web UI or  Hue Web UI.   
 Navigate to directory : `/hbase`   
 Explore the directory structure.   
-**=> Q : how are the tables stored?**   
+**=>Q : how are the tables stored?**   
 
 Navigate to your table directory.   
-**=> Q : Do you see more directories under there?  What do they represent? **   
+**=> Q : Do you see more directories under there?  What do they represent?**   
 Navigate further into the dir structure.  
 Do you see the actual file where data is stored?   
 If not, your table hasn't be saved to disk yet (not flushed).   
