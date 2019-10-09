@@ -31,7 +31,7 @@ For example, a recent version of cloudera CDH had the jar in the following locat
 
 ```sql
 hive>
-    ADD JAR /opt/cloudera/parcels/CDH/jars/hive-hcatalog-core-1.1.0-cdh5.15.0.jar
+    ADD JAR /opt/cloudera/parcels/CDH/jars/hive-hcatalog-core-2.1.1-cdh6.3.0.jar
 ```
 
 If the above doesn't work, please try this:  
