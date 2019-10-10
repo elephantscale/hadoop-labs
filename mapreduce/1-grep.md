@@ -100,7 +100,7 @@ What is the count from Hadoop grep?
 ## BONUS Lab 2: Grep on large files:
 ```bash
     $  cd   <my name>  # go to your workspace
-    $  cd   hadoop-dev-labs/data/twinkle
+    $  cd   hadoop-labs/data/twinkle
     $  ./create-data-files.sh
 ```
 
@@ -119,7 +119,7 @@ Can you figure out why?
 ## BONUS LAB 3: More Hadoop Examples
 More examples are in `hadoop-examples-*.jar`.   
 This jar file can be  found in:
-- Hortonworks :  /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples*.jar
+- Hortonworks :  `/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples*.jar`
 - Cloudera : /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar
 
 To find what mapreduce examples are available
