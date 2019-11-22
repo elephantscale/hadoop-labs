@@ -2,11 +2,15 @@ package hi.hbase;
 
 import java.util.Random;
 
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
-import org.apache.hadoop.hbase.KeyValue;
+import org.apache.hadoop.hbase.client.Table;
+import org.apache.hadoop.hbase.TableName;
+import org.apache.hadoop.hbase.client.ConnectionFactory;
+import org.apache.hadoop.hbase.client.Connection;
+import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.client.Get;
-import org.apache.hadoop.hbase.client.HTable;
 import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.util.Bytes;
 
@@ -26,8 +30,9 @@ public class Query {
 	static String familyName = "info";
 
 	public static void main(String[] args) throws Exception {
-		Configuration config = HBaseConfiguration.create();
-		HTable htable = new HTable(config, tableName);
+    		Configuration config = HBaseConfiguration.create();
+    		Connection connection = ConnectionFactory.createConnection(config);
+    		Table htable = connection.getTable(TableName.valueOf("tim_users"));
 
 		// / TODO 2 : enter rowkey
 		{
@@ -43,16 +48,17 @@ public class Query {
 			System.out.println("query took  " + (t2 - t1) + " ms");
 			
 			if (result != null) {
-				KeyValue kv = result.getColumnLatest(Bytes.toBytes("info"),
-						Bytes.toBytes("email"));
-				if (kv != null) {
-					byte[] value = kv.getValue();
+/*
+                                Cell cell == result.getColumnLatestCell(Bytes.toBytes("info"), Bytes.toBytes("email"));
+				//Cell cell == result.getColumnLatestCell(Bytes.toBytes("info"), Bytes.toBytes("email"));
+				if (cell != null) {
+					byte[] value = cell.getValueArray();
 					String email = new String(value);
 					System.out.println("    email is : " + email);
 				} else {
-					System.out.println("kv is null");
+					System.out.println("cell is null");
 				}
-
+*/
 			} else {
 				System.out.println("Result is null");
 			}
@@ -74,14 +80,14 @@ public class Query {
 			Result result = htable.get(get);
 			long t2 = System.currentTimeMillis();
 			if (result != null) {
-				KeyValue kv = result.getColumnLatest(Bytes.toBytes("info"),
+				Cell cell = result.getColumnLatestCell(Bytes.toBytes("info"),
 						Bytes.toBytes("email"));
-				if (kv != null) {
-					byte[] value = kv.getValue();
+				if (cell != null) {
+					byte[] value = cell.getValueArray();
 					String email = new String(value);
 					System.out.println("    email is : " + email);
 				} else {
-					System.out.println("kv is null");
+					System.out.println("cell is null");
 				}
 
 			} else {

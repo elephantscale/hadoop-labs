@@ -5,9 +5,13 @@ import java.util.List;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
-import org.apache.hadoop.hbase.client.HTable;
+import org.apache.hadoop.hbase.client.Table;
+import org.apache.hadoop.hbase.TableName;
+import org.apache.hadoop.hbase.client.ConnectionFactory;
+import org.apache.hadoop.hbase.client.Connection;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.util.Bytes;
+
 
 /*
  * before running this, create 'MYNAME_users' table 
@@ -23,8 +27,9 @@ public class Insert {
 	static String familyName = "info";
 
 	public static void main(String[] args) throws Exception {
-		Configuration config = HBaseConfiguration.create();
-		HTable htable = new HTable(config, tableName);
+    		Configuration config = HBaseConfiguration.create();
+    		Connection connection = ConnectionFactory.createConnection(config);
+    		Table htable = connection.getTable(TableName.valueOf("tim_users"));
 
 		int numUsers = 0;
 
@@ -32,7 +37,7 @@ public class Insert {
 		{
 			byte[] key1 = Bytes.toBytes("user1");
 			Put put1 = new Put(key1);
-			put1.add(Bytes.toBytes("info"), Bytes.toBytes("email"),
+			put1.addColumn(Bytes.toBytes("info"), Bytes.toBytes("email"),
 					Bytes.toBytes("user1@gmail.com"));
 			/// TODO 2 : now add phone number as a coulumn
 			// put1.add(???, ???, ???);
@@ -50,8 +55,8 @@ public class Insert {
 		{
 		byte[] key2 = Bytes.toBytes("user2");
 		Put put2 = ....
-		put2.add(....)
-		put2.add(???, ???, ???);
+		put2.addColumn(....)
+		put2.addColumn(???, ???, ???);
 		numUsers++;
 		}
 		  
@@ -68,9 +73,9 @@ public class Insert {
 
 			byte[] key = Bytes.toBytes(userid);
 			Put put = new Put(key);
-			put.add(Bytes.toBytes("info"), Bytes.toBytes("email"),
+			put.addColumn(Bytes.toBytes("info"), Bytes.toBytes("email"),
 					Bytes.toBytes(email));
-			put.add(Bytes.toBytes("info"), Bytes.toBytes("phone"),
+			put.addColumn(Bytes.toBytes("info"), Bytes.toBytes("phone"),
 					Bytes.toBytes(phone));
 
 			/// TODO : add the new put into the list

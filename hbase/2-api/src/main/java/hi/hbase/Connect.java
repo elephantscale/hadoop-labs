@@ -2,7 +2,10 @@ package hi.hbase;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
-import org.apache.hadoop.hbase.client.HTable;
+import org.apache.hadoop.hbase.client.Table;
+import org.apache.hadoop.hbase.TableName;
+import org.apache.hadoop.hbase.client.ConnectionFactory;
+import org.apache.hadoop.hbase.client.Connection;
 
 /**
  * before running this, create 'MYNAME_users' table 
@@ -15,7 +18,8 @@ public class Connect {
 
   public static void main(String[] args) throws Exception {
     Configuration config = HBaseConfiguration.create();
-    HTable htable = new HTable(config, "MYNAME_users");     // TODO : change table name
+    Connection connection = ConnectionFactory.createConnection(config);
+    Table htable = connection.getTable(TableName.valueOf("tim_users"));
     System.out.println ("### connected to " + htable.getTableDescriptor().getNameAsString());
     htable.close();
   }
