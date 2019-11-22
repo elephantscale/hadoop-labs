@@ -48,17 +48,9 @@ public class Query {
 			System.out.println("query took  " + (t2 - t1) + " ms");
 			
 			if (result != null) {
-/*
-                                Cell cell == result.getColumnLatestCell(Bytes.toBytes("info"), Bytes.toBytes("email"));
-				//Cell cell == result.getColumnLatestCell(Bytes.toBytes("info"), Bytes.toBytes("email"));
-				if (cell != null) {
-					byte[] value = cell.getValueArray();
-					String email = new String(value);
-					System.out.println("    email is : " + email);
-				} else {
-					System.out.println("cell is null");
-				}
-*/
+				byte[] value = result.getValue(Bytes.toBytes("info"), Bytes.toBytes("email"));
+				String email = new String(value);
+				System.out.println("    email is : " + email);
 			} else {
 				System.out.println("Result is null");
 			}
@@ -80,16 +72,10 @@ public class Query {
 			Result result = htable.get(get);
 			long t2 = System.currentTimeMillis();
 			if (result != null) {
-				Cell cell = result.getColumnLatestCell(Bytes.toBytes("info"),
-						Bytes.toBytes("email"));
-				if (cell != null) {
-					byte[] value = cell.getValueArray();
-					String email = new String(value);
-					System.out.println("    email is : " + email);
-				} else {
-					System.out.println("cell is null");
-				}
-
+				byte[] value = result.getValue(Bytes.toBytes("info"), Bytes.toBytes("email"));
+				String email = new String(value);
+				System.out.println("    email is : " + email);
+                        }
 			} else {
 				System.out.println("Result is null");
 			}
