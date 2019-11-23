@@ -31,7 +31,7 @@ public class Update {
   public static void main(String[] args) throws Exception {
     Configuration config = HBaseConfiguration.create();
     Connection connection = ConnectionFactory.createConnection(config);
-    Table htable = connection.getTable(TableName.valueOf("tim_users"));
+    Table htable = connection.getTable(TableName.valueOf(tableName));
 
     int id = 10; // random id
     String userid = "user-" + id;

@@ -29,7 +29,7 @@ public class Insert {
 	public static void main(String[] args) throws Exception {
     		Configuration config = HBaseConfiguration.create();
     		Connection connection = ConnectionFactory.createConnection(config);
-    		Table htable = connection.getTable(TableName.valueOf("tim_users"));
+    		Table htable = connection.getTable(TableName.valueOf(tableName));
 
 		int numUsers = 0;
 
@@ -40,7 +40,7 @@ public class Insert {
 			put1.addColumn(Bytes.toBytes("info"), Bytes.toBytes("email"),
 					Bytes.toBytes("user1@gmail.com"));
 			/// TODO 2 : now add phone number as a coulumn
-			// put1.add(???, ???, ???);
+			// put1.addColumn(???, ???, ???);
 
 			// finally put this into table
 			long t1 = System.currentTimeMillis();
@@ -64,6 +64,7 @@ public class Insert {
 
 		/// BONUS LAB : add a few users
 		/// we are inserting them in batch
+		/*
 		int total = 100;
 		List<Put> batch = new ArrayList<Put>(); // list of puts
 		for (int i = 0; i < total; i++) {
@@ -89,6 +90,7 @@ public class Insert {
 		long t2 = System.currentTimeMillis();
 		System.out.println("### inserted " + numUsers + " users  in " + (t2 - t1)
 				+ " ms");
+		*/
 
 		htable.close();
 	}

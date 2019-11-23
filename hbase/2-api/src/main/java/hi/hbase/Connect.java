@@ -19,7 +19,7 @@ public class Connect {
   public static void main(String[] args) throws Exception {
     Configuration config = HBaseConfiguration.create();
     Connection connection = ConnectionFactory.createConnection(config);
-    Table htable = connection.getTable(TableName.valueOf("tim_users"));
+    Table htable = connection.getTable(TableName.valueOf("MYNAME_users"));
     System.out.println ("### connected to " + htable.getTableDescriptor().getNameAsString());
     htable.close();
   }

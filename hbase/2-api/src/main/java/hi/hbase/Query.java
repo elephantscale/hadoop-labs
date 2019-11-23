@@ -32,7 +32,7 @@ public class Query {
 	public static void main(String[] args) throws Exception {
     		Configuration config = HBaseConfiguration.create();
     		Connection connection = ConnectionFactory.createConnection(config);
-    		Table htable = connection.getTable(TableName.valueOf("tim_users"));
+    		Table htable = connection.getTable(TableName.valueOf(tableName));
 
 		// / TODO 2 : enter rowkey
 		{
