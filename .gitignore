@@ -13,3 +13,4 @@
 *.zip*
 
 .DS_Store
+*.html
