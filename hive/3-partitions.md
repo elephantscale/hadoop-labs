@@ -1,8 +1,8 @@
 <link rel='stylesheet' href='../assets/css/main.css'/>
 
-[Main Index](../../README.md)
+[Main Index](../README.md)
 
------
+---
 
 # Lab HIVE-3 : Hive Partitions
 
@@ -21,9 +21,10 @@ We can load data into Hive
 We will stage our data in HDFS.
 
 Execute these in hive shell.  
-**=> Fix 'MY_NAME' in table definition below**
 
-```sql
+**=> TODO: Fix 'MY_NAME' in table definition below**
+
+```
 hive>
   -- make an staging directory
   dfs  -mkdir -p MY_NAME/staging/  ;
@@ -32,11 +33,14 @@ hive>
   dfs -cp /data/transactions/in/transaction-2015-01-01.csv    MY_NAME/staging/  ;
 
   dfs -cp /data/transactions/in/transaction-2015-01-02.csv    MY_NAME/staging/  ;
+  
+  -- see files in staging dir
+  dfs -ls -R   MY_NAME/staging/ ;
 ```
 
 ## Step 3: Create partition table
 
-**=> Fix 'MY_NAME' in table definition below**
+**=> TODO: Fix 'MY_NAME' in table definition below**
 
 ```sql
     hive>
@@ -92,7 +96,7 @@ Note :  We have to specify the partition.
 
 ```
     hive>
-        dfs -ls  MY_NAME/staging/ ;
+        dfs -ls -R  MY_NAME/staging/ ;
 ```
 
 ## STEP 5:  Using partitions

@@ -2,7 +2,7 @@
 
 [Main Index](../../README.md)
 
------
+---
 
 # Lab HIVE-10: Analyzing Text Data
 
@@ -16,7 +16,7 @@ Click on the links to download the text.
 
 ## STEP 1: Instructor only  : Stage Data in HDFS
 
-```
+```bash
     $   cd   ~/MYNAME/hadoop-dev/
 
     # SOTU
@@ -137,5 +137,5 @@ Also find what words follow the word `markets`
 Try these word cloud generators  
 - https://www.jasondavies.com/wordcloud/
 
-- Copy paste text from [sotu-2014-obama.txt](sotu-2014-obama.txt)   
+- Copy paste text from [sotu-2014-obama.txt](../data/text/sotu-2014-obama.txt)   
 ([alternate link](https://raw.githubusercontent.com/elephantscale/HI-labs/master/hadoop-dev/hive/text/sotu-2014-obama.txt) )
