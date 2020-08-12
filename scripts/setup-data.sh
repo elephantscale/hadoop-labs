@@ -17,7 +17,7 @@ sudo -u hdfs  hdfs dfs -chown $USER "$data"
 
 
 # generate CC data
-python ../data/cc-data/gen-cc-data.py
+python2 ../data/cc-data/gen-cc-data.py
 
 # transactions
 hdfs  dfs -mkdir -p  "$data"/transactions/in
@@ -63,9 +63,9 @@ hdfs   dfs -mkdir  -p  "$data"/clickstream/in/
 hdfs   dfs   -put   ../data/click-stream/clickstream.csv    "$data"/clickstream/in/
 
 #  generate clickstream data
-python ../data/click-stream/gen-clickstream.py
+python2 ../data/click-stream/gen-clickstream.py
 hdfs dfs -put clickstream*.csv   "$data"/clickstream/in/
-python ../data/click-stream/gen-clickstream-json.py
+python2 ../data/click-stream/gen-clickstream-json.py
 hdfs dfs -put   *.json   "$data"/clickstream/in-json/
 
 ## Domains
