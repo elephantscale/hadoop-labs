@@ -143,7 +143,7 @@ Make sure to use your own DB.
             id INT,
             account_id INT,
             vendor_id INT,
-            time STRING,
+            `time` STRING,
             city STRING,
             state STRING ,
             amount DOUBLE)
