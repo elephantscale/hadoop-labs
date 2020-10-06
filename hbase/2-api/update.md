@@ -1,24 +1,24 @@
-<link rel='stylesheet' href='../../assets/css/main.css'/>
-[main index](../../README.md) / [HBase API](./README.md)
-
-----
-
 # Lab : Use HBase Java APIs for CRUD
-
-Project dir : `MY_NAME/hadoop-labs/hbase/2-api`  
+----
+Project dir : `HI-labs/hadoop-dev/hbase/api`   
 You can also open the project in eclipse
 
 
 ## STEP 0: Switch To Working Directory
 (Change MYNAME accordingly)
 ```
-    $   cd   MY_NAME/hadoop-labs/hbase/2-api 
+    $   cd   ~/MYNAME/HI-labs/hadoop-dev/hbase/api
 ```
 
 
-## STEP 1: Edit Update.java
+## STEP 1) Edit Update.java
 Edit the file : `src/main/java/hi/hbase/Update.java`.  
 And complete the TODO items.
+```
+    $   vi  src/main/java/hi/hbase/Update.java
+    # or
+    $   nano  src/main/java/hi/hbase/Update.java
+```
 
 ## STEP 2: Compile The Code
 From the project working dir
@@ -73,7 +73,7 @@ What is the observation.
 
 
 ## BONUS Lab 1:  Upsert
-Edit file `src/main/java/hi/hbase/Update.java`.
+Edit file `src/main/java/hi/hbase/Update.java`. 
 Change the user-id to some id that you know doesn't exist  (e.g : user-999).  
 Compile and run the code.
 Does HBase throw a 'record not found' exception?   

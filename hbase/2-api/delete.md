@@ -1,11 +1,7 @@
-<link rel='stylesheet' href='../../assets/css/main.css'/>
-[main index](../../README.md)/ [HBase API](./README.md)
-
+#Lab : Use HBase Java APIs for CRUD
 ----
-
-# Lab : Use HBase Java APIs for CRUD
-Project dir : `MY_NAME/hadoop-labs/hbase/2-api`  
-You can also open the project in eclipse.
+Project dir : `HI-labs/hadoop-dev/hbase/crud`
+You can also open the project in eclipse. 
 
 This lab is left as a bonus lab for student.
 

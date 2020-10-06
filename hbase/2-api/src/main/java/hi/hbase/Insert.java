@@ -3,15 +3,16 @@ package hi.hbase;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
-import org.apache.hadoop.hbase.client.Table;
-import org.apache.hadoop.hbase.TableName;
+import org.apache.hadoop.hbase.client.HTable;
 import org.apache.hadoop.hbase.client.ConnectionFactory;
-import org.apache.hadoop.hbase.client.Connection;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.util.Bytes;
-
+import org.apache.hadoop.hbase.client.Table;
+import org.apache.hadoop.hbase.TableName;
 
 /*
  * before running this, create 'MYNAME_users' table 
@@ -27,9 +28,8 @@ public class Insert {
 	static String familyName = "info";
 
 	public static void main(String[] args) throws Exception {
-    		Configuration config = HBaseConfiguration.create();
-    		Connection connection = ConnectionFactory.createConnection(config);
-    		Table htable = connection.getTable(TableName.valueOf(tableName));
+		Configuration config = HBaseConfiguration.create();
+		Table htable = ConnectionFactory.createConnection(config ).getTable(TableName.valueOf(tableName));
 
 		int numUsers = 0;
 
@@ -40,7 +40,7 @@ public class Insert {
 			put1.addColumn(Bytes.toBytes("info"), Bytes.toBytes("email"),
 					Bytes.toBytes("user1@gmail.com"));
 			/// TODO 2 : now add phone number as a coulumn
-			// put1.addColumn(???, ???, ???);
+			// put1.add(???, ???, ???);
 
 			// finally put this into table
 			long t1 = System.currentTimeMillis();
@@ -55,8 +55,8 @@ public class Insert {
 		{
 		byte[] key2 = Bytes.toBytes("user2");
 		Put put2 = ....
-		put2.addColumn(....)
-		put2.addColumn(???, ???, ???);
+		put2.add(....)
+		put2.add(???, ???, ???);
 		numUsers++;
 		}
 		  
@@ -64,7 +64,6 @@ public class Insert {
 
 		/// BONUS LAB : add a few users
 		/// we are inserting them in batch
-		/*
 		int total = 100;
 		List<Put> batch = new ArrayList<Put>(); // list of puts
 		for (int i = 0; i < total; i++) {
@@ -90,7 +89,6 @@ public class Insert {
 		long t2 = System.currentTimeMillis();
 		System.out.println("### inserted " + numUsers + " users  in " + (t2 - t1)
 				+ " ms");
-		*/
 
 		htable.close();
 	}

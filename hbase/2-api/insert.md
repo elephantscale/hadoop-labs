@@ -1,23 +1,24 @@
-<link rel='stylesheet' href='../../assets/css/main.css'/>
-[main index](../../README.md)/ [HBase API](./README.md)
-
+Lab : Use HBase Java APIs for CRUD
 ----
 
-# Lab : Use HBase Java APIs for CRUD
-
-Project dir : `MY_NAME/hadoop-labs/hbase/2-api`  
+Project dir : `HI-labs/hadoop-dev/hbase/api` .
 You can also open the project in eclipse.
 
 ## STEP 0: Switch To Working Directory
 (Change MYNAME accordingly)
 ```
-    $    cd   ~/MYNAME/hadoop-labs/hbase/2-api
+    $   cd   ~/MYNAME/HI-labs/hadoop-dev/hbase/api
 ```
 
 
 ## STEP 1:  Edit Insert.java
 Edit the file : `src/main/java/hi/hbase/Insert.java`.  
 And complete the TODO items.
+```
+    $   vi  src/main/java/hi/hbase/Insert.java
+    # or
+    $   nano  src/main/java/hi/hbase/Insert.java
+```
 
 
 ## STEP 2: Compile The Code
@@ -77,3 +78,4 @@ ROW                        COLUMN+CELL
  user-11           column=info:phone, timestamp=1399412991620, value=555-1234
 
 ```
+

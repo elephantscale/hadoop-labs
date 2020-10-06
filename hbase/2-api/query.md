@@ -1,24 +1,24 @@
-<link rel='stylesheet' href='../../assets/css/main.css'/>
-[main index](../../README.md) / [HBase API](./README.md)
-
+# Lab : Use HBase Java APIs for CRUD
 ----
 
-# Lab : Use HBase Java APIs for CRUD
-
-Project dir : `MY_NAME/hadoop-labs/hbase/2-api`  
+Project dir : `HI-labs/hadoop-dev/hbase/api`.  
 You can also open the project in eclipse
 
 ## STEP 0: Switch To Working Directory
 (Change MYNAME accordingly)
 ```
-    $   cd   MY_NAME/hadoop-labs/hbase/2-api  
+    $   cd   ~/MYNAME/HI-labs/hadoop-dev/hbase/api
 ```
 
 
-## STEP 1: Edit Query.java
+## STEP 1) Edit Query.java
 Edit the file : `src/main/java/hi/hbase/Query.java`.  
 And complete the TODO items.
-
+```
+    $   vi  src/main/java/hi/hbase/Query.java
+    # or
+    $   nano  src/main/java/hi/hbase/Query.java
+```
 
 ## STEP 2: Compile The Code
 From the project working dir

@@ -1,26 +1,25 @@
-<link rel='stylesheet' href='../../assets/css/main.css'/>
-[main index](../../README.md)  / [HBase API](./README.md)
-
+# Lab : Use HBase Java APIs for connecting
 ----
 
-# Lab : Use HBase Java APIs for connecting
-
-Project working dir : `MY_NAME/hadoop-labs/hbase/2-api`  
+Project working dir : `HI-labs/hadoop-dev/hbase/api`.   
 You can also open the project in eclipse
 
 
 ## STEP 0: Switch To Working Directory
 (Change MYNAME accordingly)
 ```
-    $   cd   ~/MYNAME/hadoop-labs/hbase/2-api
+    $   cd   ~/MYNAME/HI-labs/hadoop-dev/hbase/api
 ```
 
 
 ## STEP 1:  Edit Connect.java
 Edit the file : `src/main/java/hi/hbase/Connect.java`.   
-Recommend `noide` editor to edit.  
 And complete the TODO items.
-
+```
+    $   vi  src/main/java/hi/hbase/Connect.java
+    # or
+    $   nano  src/main/java/hi/hbase/Connect.java
+```
 
 ## STEP 2: Compile The Code
 From the project working dir
@@ -60,7 +59,6 @@ You can use the following Java code.
 ```java
     long  t1 = System.currentTimeMillis();
     // establish connection
-    HTable htable = new HTable(config, "MYNAME_users");
     long  t2 = System.currentTimeMillis();
     System.out.println ("### connection took : " + (t2 - t1) + " ms");
 ```

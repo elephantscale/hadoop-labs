@@ -1,11 +1,7 @@
-<link rel='stylesheet' href='../../assets/css/main.css'/>
-[main index](../../README.md)
-
+# Lab : Use HBase Java APIs for CRUD (Create, Read, Update, Delete)
 ----
 
-# Lab : Use HBase Java APIs for CRUD (Create, Read, Update, Delete)
-
-Project dir : `MY_NAME/hadoop-labs/hbase/2-api`  
+Project dir : `HI-labs/hadoop-dev/hbase/api`  
 You can also open the project in eclipse.
 
 HBase Java API : https://hbase.apache.org/apidocs/
@@ -13,7 +9,7 @@ HBase Java API : https://hbase.apache.org/apidocs/
 ## STEP 0: Switch To Working Directory
 (Change MYNAME accordingly)
 ```
-    $   cd   ~/MYNAME/hadoop-labs/hbase/2-api
+    $   cd   ~/MYNAME/HI-labs/hadoop-dev/hbase/api
 ```
 
 ## STEP 1: create a users table on hbase
