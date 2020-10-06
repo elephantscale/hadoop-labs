@@ -93,7 +93,7 @@ You should get the top row from the table.  It *may* look like this:
 Take the row from step 3, and try to update it (Your query might look slightly different).
 
 ```sql
-update transactions_orc set vendor_id=9 whereid=600001;
+update transactions_orc set vendor_id=9 where id=600001;
 ```
 
 Now let's try to select the row and see if it appears to be updated again.
