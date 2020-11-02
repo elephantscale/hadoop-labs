@@ -67,7 +67,7 @@ What is the query?
 ## STEP 5: Calculate accounts totals by month
 ```sql
     >
-    select account_id, YEAR(time) as year, MONTH(time) as month, SUM(amount) as total from transactions group by ???? limit 10;
+    select account_id, YEAR(`time`) as year, MONTH(time) as month, SUM(amount) as total from transactions group by ???? limit 10;
 ```
 
 
@@ -109,25 +109,3 @@ Here is the query:
 
 ```
 
-## Step 8: Improving table design
-For our `transactions` table we are using DOUBLE to represent `amount`.  For financial data, this is not a good idea, as witnessed by rounding errors we see in output.
-
-We can use DECIMAL type.  
-  DECIMAL (precision, scale)
-
-To change the table schema you can use 'ALTER' command.   
-
-```sql
-hive>
-
-  desc transactions;
-
-  ALTER table transactions CHANGE COLUMN amount amount DECIMAL(10,2);
-
-  desc transactions;
-
-  -- let's run top-10 query
-  select account_id, SUM(amount) as total from transactions group by account_id order by total desc limit 10;
-```
-
-**=> Notice the output **
