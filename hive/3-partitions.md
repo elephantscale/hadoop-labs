@@ -120,5 +120,5 @@ Lets run some queries using partitions
 ## STEP 6:  Verify data layount in HDFS
 ```
     hive>
-      dfs -ls -R   MY_NAME/transactions/in-part/ ;
+      dfs -ls -R   /user/LOGIN_NAME/MY_NAME/transactions/in-part/ ;
 ```
