@@ -119,8 +119,14 @@ select ????  from transactions_orc WHERE ???;
 
 Drop out of hive client
 
+You will need to idnetify the warehouse folder. This is in different places.  Try the following locations
+
 ```bash
 sudo -u hdfs hdfs dfs -ls /warehouse/tablespace/managed/hive/MY_NAME_db.db/transactions_orc
+```
+
+```bash
+sudo -u hdfs  hdfs dfs -ls /user/hive/warehouse/tim_db.db/transactions_orc/
 ```
 
 You should see some of the delta files.
