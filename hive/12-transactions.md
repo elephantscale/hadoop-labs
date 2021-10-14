@@ -55,7 +55,9 @@ Read  [hive clients](../README.md) for more details.
 ```sql
 use MY_NAME_db;
 
-CREATE table transactions_orc as select * from transactions;
+set hive.txn.manager=org.apache.hadoop.hive.ql.lockmgr.DbTxnManager;
+
+CREATE table transactions_orc stored as orc TBLPROPERTIES('transactional'='true') as select * from transactions;
 
 ```
 
