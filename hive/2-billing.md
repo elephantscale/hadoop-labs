@@ -67,7 +67,7 @@ What is the query?
 ## STEP 5: Calculate accounts totals by month
 ```sql
     >
-    select account_id, YEAR(`time`) as year, MONTH(time) as month, SUM(amount) as total from transactions group by ???? limit 10;
+    select account_id, YEAR(`time`) as year, MONTH(`time`) as month, SUM(amount) as total from transactions group by ???? limit 10;
 ```
 
 
