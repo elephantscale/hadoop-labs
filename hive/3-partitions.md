@@ -117,7 +117,7 @@ Lets run some queries using partitions
 **=>Note the count results.**
 
 
-## STEP 6:  Verify data layount in HDFS
+## STEP 6:  Verify data layout in HDFS
 ```
     hive>
       dfs -ls -R   /user/LOGIN_NAME/MY_NAME/transactions/in-part/ ;
