@@ -56,6 +56,9 @@ Read  [hive clients](../README.md) for more details.
 use MY_NAME_db;
 
 set hive.txn.manager=org.apache.hadoop.hive.ql.lockmgr.DbTxnManager;
+set hive.support.concurrency=true;
+
+drop table transaction_orc;  -- If needed
 
 CREATE table transactions_orc stored as orc TBLPROPERTIES('transactional'='true') as select * from transactions;
 
@@ -64,7 +67,7 @@ CREATE table transactions_orc stored as orc TBLPROPERTIES('transactional'='true'
 You have now created a new transactional table.  Let's confirm that is the case:
 
 ```sql
-describe extended transactions_orc;
+describe formattedtransactions_orc;
 ```
 
 HINT: examine the field `parameters.transactional_properties`
