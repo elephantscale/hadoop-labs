@@ -67,7 +67,7 @@ CREATE table transactions_orc stored as orc TBLPROPERTIES('transactional'='true'
 You have now created a new transactional table.  Let's confirm that is the case:
 
 ```sql
-describe formattedtransactions_orc;
+describe formatted transactions_orc;
 ```
 
 HINT: examine the field `parameters.transactional_properties`
