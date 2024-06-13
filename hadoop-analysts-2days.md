@@ -26,7 +26,7 @@ If this link does not work, search for markdown-preview-plus in https://chrome.g
 - [Setup by instructor](setup-instructor.md) - To be completed by _instructor only_
 
 #### Hadoop & HDFS
-- [HADOOP-1 : Hadoop Intro](intro/1-hadoop-intro.md)
+- [HADOOP-1 : Hadoop Intro](intro/2-hadoop-intro.md)
 - [HDFS-1 : HDFS Intro](hdfs/1-hdfs-intro.md) - demo by instructor
 
 #### [Optional] MapReduce - demo by instructor

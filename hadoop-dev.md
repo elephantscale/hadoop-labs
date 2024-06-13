@@ -9,7 +9,7 @@
 - [2 - Setup by student](setup-student.md)
 
 #### Hadoop & HDFS
-- [HADOOP-1 : Hadoop Intro](intro/1-hadoop-intro.md)
+- [HADOOP-1 : Hadoop Intro](intro/2-hadoop-intro.md)
 - [HDFS-1 : HDFS Intro](hdfs/1-hdfs-intro.md) - demo by instructor
 
 #### MapReduce - Optional demo by instructor
