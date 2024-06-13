@@ -1,0 +1,1 @@
+ssh -i ~/.ssh/hadoop-ohio.pem hadoop@ec2-13-59-102-250.us-east-2.compute.amazonaws.com
